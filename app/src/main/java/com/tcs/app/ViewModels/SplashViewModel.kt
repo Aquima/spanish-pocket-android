@@ -6,6 +6,7 @@ import android.content.Intent
 import android.util.Log
 import com.google.firebase.FirebaseApp
 import com.tcs.app.Views.HomeActivity
+import com.tcs.app.Views.LogInActivity
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -14,7 +15,7 @@ class SplashViewModel: ViewModel() {
 
         //toda la logica para ir al home validacion traer configuraciuon etc etc
         Timer().schedule(3000){
-            val intent = Intent(context,HomeActivity::class.java)
+            val intent = Intent(context,LogInActivity::class.java)
             context.startActivity(intent)
         }
     }
