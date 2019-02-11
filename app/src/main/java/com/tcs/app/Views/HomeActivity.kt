@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         auth = FirebaseAuth.getInstance()
-       // this.createAccount("jgomezvg@gmail.com","123456")
+
         this.signIn("jgomezvg@gmail.com","123456")
     }
     fun createAccount(email:String,password:String){
