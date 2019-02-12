@@ -20,6 +20,7 @@ class ApiClient {
         val observable:Observable<WongUser> = Observable.create { observer ->
             this.auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this.currentActivity) { task ->
                 if (task.isSuccessful) {
+
                     var email:String? = this.auth.currentUser?.email
                     var isEmailVerified:Boolean? = this.auth.currentUser?.isEmailVerified
                     if (email != null && isEmailVerified!= null){
@@ -31,7 +32,6 @@ class ApiClient {
 
                     val error:Throwable = Throwable("el email y password son incorrectos",null)
                     observer.onError(error)
-                //    observer.onError(error("el email y password son incorrectos"))
                 }
             }
         }
@@ -42,6 +42,8 @@ class ApiClient {
         val observable:Observable<WongUser> = Observable.create { observer ->
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this.currentActivity) { task ->
                 if(task.isSuccessful){
+
+                    this.auth.currentUser?.sendEmailVerification()
                     var email:String? = this.auth.currentUser?.email
                     var isEmailVerified:Boolean? = this.auth.currentUser?.isEmailVerified
                     if(email != null && isEmailVerified != null){
