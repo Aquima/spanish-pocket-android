@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppWong</string>
+    <string name="lbl_greeting">¡Hello!</string>
+    <string name="lbl_welcome">Welcome</string>
+    <string name="ph_txt_email">Email</string>
+    <string name="ph_txt_password">Password</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_newaccount">Sign Up</string>
+    <string name="btn_recoverypass">Forgot Password</string>
+    <string name="msg_loginerror">Error</string>
+    <string name="msg_cancel">Cancel</string>
+    <string name="lbl_registertitle">Create Account</string>
+    <string name="btn_createaccount">Create Account</string>
+</resources>
