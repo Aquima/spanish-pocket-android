@@ -65,13 +65,14 @@
                 android:hint="@string/ph_txt_email"
                 android:textColor="@color/primaryWhiteColor"
                 android:textColorHint="@color/primaryWhiteColor"
+                android:textCursorDrawable="@drawable/color_cursor_drawable"
                 android:background="@null"
                 android:layout_marginLeft="20dp"/>
         <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
                 android:background="@color/primaryWhiteColor"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="15dp"/>
 
         <EditText
                 android:layout_width="350dp"
@@ -82,6 +83,7 @@
                 android:hint="@string/ph_txt_password"
                 android:textColor="@color/primaryWhiteColor"
                 android:textColorHint="@color/primaryWhiteColor"
+                android:textCursorDrawable="@drawable/color_cursor_drawable"
                 android:background="@null"
                 android:layout_marginLeft="20dp"/>
     </LinearLayout>
