@@ -1,5 +1,6 @@
 package com.tcs.app
 
+import com.tcs.app.Models.LogInModel
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,7 +12,20 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun validate_email() {
+
+        val logInModel = LogInModel()
+        val email:String = "alberto@gmail.com"
+        assertTrue("Es valido",logInModel.validateMail(email))
+        val badEmail:String = "albertó@gmail.com"
+        assertFalse("Es invalido",logInModel.validateMail(badEmail))
+    }
+    @Test
+    fun validate_password(){
+        val logInModel = LogInModel()
+        val password = "123456"
+        assertTrue("es valido",logInModel.validatePassword(password))
+        val bad_password = "12345"
+        assertFalse("no es valido",logInModel.validatePassword(bad_password))
     }
 }

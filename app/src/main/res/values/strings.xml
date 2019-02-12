@@ -1,4 +1,14 @@
 <resources>
-    <string name="app_name">App</string>
-    <string name="btnTitleSplash">Ingresar</string>
+    <string name="app_name">AppWong</string>
+    <string name="lbl_greeting">¡Hola!</string>
+    <string name="lbl_welcome">te damos la bienvenida</string>
+    <string name="ph_txt_email">Correo Electronico</string>
+    <string name="ph_txt_password">Contraseña</string>
+    <string name="btn_login">Iniciar Sesión</string>
+    <string name="btn_newaccount">Crear una cuenta</string>
+    <string name="btn_recoverypass">¿Recupera tu contraseña?</string>
+    <string name="msg_loginerror">Error</string>
+    <string name="msg_cancel">Cancelar</string>
+    <string name="lbl_registertitle">Crear Cuenta</string>
+    <string name="btn_createaccount">Crear Cuenta</string>
 </resources>

@@ -18,7 +18,6 @@ class ApiClient {
 
     fun signIn(email:String,password:String):Observable<WongUser>{
         val observable:Observable<WongUser> = Observable.create { observer ->
-
             this.auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this.currentActivity) { task ->
                 if (task.isSuccessful) {
 
@@ -29,20 +28,36 @@ class ApiClient {
                         observer.onNext(meUser)
                         observer.onComplete()
                     }
-
                 } else {
 
                     val error:Throwable = Throwable("el email y password son incorrectos",null)
                     observer.onError(error)
-                //    observer.onError(error("el email y password son incorrectos"))
                 }
-
             }
-
         }
         return observable
+    }
 
+    fun createAccount(email:String,password:String):Observable<WongUser>{
+        val observable:Observable<WongUser> = Observable.create { observer ->
+            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this.currentActivity) { task ->
+                if(task.isSuccessful){
 
-
+                    this.auth.currentUser?.sendEmailVerification()
+                    var email:String? = this.auth.currentUser?.email
+                    var isEmailVerified:Boolean? = this.auth.currentUser?.isEmailVerified
+                    if(email != null && isEmailVerified != null){
+                        val meUser = WongUser(email,isEmailVerified)
+                        observer.onNext(meUser)
+                        observer.onComplete()
+                    }
+                }
+                else{
+                    val error:Throwable = Throwable("No se pudo crear la cuenta",null)
+                    observer.onError(error)
+                }
+            }
+        }
+        return  observable
     }
 }
