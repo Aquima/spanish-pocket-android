@@ -105,6 +105,7 @@
                 android:textColor="@color/primaryRedColor"
                 android:textAllCaps="false"
                 android:layout_marginBottom="10dp"
+                android:fontFamily="@font/helvetica"
                 android:onClick="tapToCreateAccount"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
