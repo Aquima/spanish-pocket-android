@@ -1,6 +1,5 @@
-package com.tcs.app.Models
+package com.quimalabs.sp.Models
 
-import io.reactivex.Observable
 import java.util.regex.Pattern
 
 class LogInModel {

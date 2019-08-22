@@ -1,59 +1,37 @@
 {
   "project_info": {
-    "project_number": "848354962186",
-    "firebase_url": "https://wong-mvp.firebaseio.com",
-    "project_id": "wong-mvp",
-    "storage_bucket": "wong-mvp.appspot.com"
+    "project_number": "467518448833",
+    "firebase_url": "https://spanishpocket-8cfbf.firebaseio.com",
+    "project_id": "spanishpocket-8cfbf",
+    "storage_bucket": "spanishpocket-8cfbf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:848354962186:android:da23694ba496a7d9",
+        "mobilesdk_app_id": "1:467518448833:android:44ffbc43f1c44c67",
         "android_client_info": {
-          "package_name": "com.tcs.app"
+          "package_name": "com.quimalabs.sp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "848354962186-0t0aifc609pf61vhbs1jeo895s0og87s.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tcs.app",
-            "certificate_hash": "af8f42554c9d2dc3a5fbe7d96d7048f18742ee76"
-          }
-        },
-        {
-          "client_id": "848354962186-ckgpkntkm43c3gpp9k2mk2c8m3kn8emu.apps.googleusercontent.com",
+          "client_id": "467518448833-td6f429nfcghm3eq6di43i4e90e5c8uq.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB6FojCRHYu4QfSYYnKyRvQYj2aim0YlEI"
+          "current_key": "AIzaSyCgW32rDYsePXyi8ubIaGyHMY-94K3-t-o"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "848354962186-ckgpkntkm43c3gpp9k2mk2c8m3kn8emu.apps.googleusercontent.com",
+              "client_id": "467518448833-td6f429nfcghm3eq6di43i4e90e5c8uq.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "848354962186-equahrrfduqv3lcrr0br9a9rtcg6vcso.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.tcs.mvpwong"
-              }
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

@@ -1,9 +1,9 @@
-package com.tcs.app.ViewModels
+package com.quimalabs.sp.ViewModels
 
 import android.app.Activity
 import android.arch.lifecycle.ViewModel
-import com.tcs.app.Models.ApiClient
-import com.tcs.app.Models.WongUser
+import com.quimalabs.sp.Models.ApiClient
+import com.quimalabs.sp.Models.WongUser
 import io.reactivex.Observable
 
 class RegisterViewModel: ViewModel() {

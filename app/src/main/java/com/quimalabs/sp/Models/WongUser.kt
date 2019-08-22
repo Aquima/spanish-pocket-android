@@ -1,4 +1,4 @@
-package com.tcs.app.Models
+package com.quimalabs.sp.Models
 
 class WongUser {
     constructor(email:String,isVerified:Boolean){

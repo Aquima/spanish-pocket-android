@@ -5,11 +5,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primaryRedColor"
+        android:background="@color/primaryWhiteColor"
         tools:context=".Views.RegisterActivity">
     <ImageButton
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             app:srcCompat="@drawable/img_close"
             android:id="@+id/btn_close"
             app:layout_constraintTop_toTopOf="parent"
@@ -19,7 +19,8 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginLeft="330dp"
             android:layout_marginStart="330dp"
-            android:onClick="backLogin" tools:ignore="VectorDrawableCompat"/>
+            android:onClick="backLogin" tools:ignore="VectorDrawableCompat" android:scaleType="fitCenter"
+            android:layout_marginRight="10dp" android:layout_marginEnd="10dp"/>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -43,7 +44,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:textColor="@color/primaryWhiteColor"
+                android:textColor="@color/colorGreen"
                 android:textSize="50dp"
                 android:layout_gravity="center"/>
     </LinearLayout>
@@ -63,15 +64,15 @@
                 android:ems="10"
                 android:id="@+id/txt_email"
                 android:hint="@string/ph_txt_email"
-                android:textColor="@color/primaryWhiteColor"
-                android:textColorHint="@color/primaryWhiteColor"
-                android:textCursorDrawable="@drawable/color_cursor_drawable"
+                android:textColor="@color/colorGreen"
+                android:textColorHint="@color/hintTextColor"
+                android:textCursorDrawable="@color/colorGreen"
                 android:background="@null"
                 android:layout_marginLeft="20dp"/>
         <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="@color/primaryWhiteColor"
+                android:background="@color/colorGreen"
                 android:layout_marginLeft="15dp"/>
 
         <EditText
@@ -81,11 +82,34 @@
                 android:ems="10"
                 android:id="@+id/txt_password"
                 android:hint="@string/ph_txt_password"
-                android:textColor="@color/primaryWhiteColor"
-                android:textColorHint="@color/primaryWhiteColor"
-                android:textCursorDrawable="@drawable/color_cursor_drawable"
+                android:textColor="@color/colorGreen"
+                android:textColorHint="@color/hintTextColor"
+                android:textCursorDrawable="@color/colorGreen"
                 android:background="@null"
                 android:layout_marginLeft="20dp"/>
+        <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGreen"
+                android:layout_marginLeft="15dp"/>
+
+        <EditText
+                android:layout_width="350dp"
+                android:layout_height="35dp"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/txt_retype_password"
+                android:hint="@string/retype_password"
+                android:textColor="@color/colorGreen"
+                android:textColorHint="@color/hintTextColor"
+                android:textCursorDrawable="@color/colorGreen"
+                android:background="@null"
+                android:layout_marginLeft="20dp"/>
+        <View
+                android:layout_width="330dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGreen"
+                android:layout_marginLeft="15dp"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
@@ -94,7 +118,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutB"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="10dp"
             android:id="@+id/linearLayoutC">
         <Button
                 android:text="@string/btn_createaccount"
@@ -102,10 +125,10 @@
                 android:layout_height="45dp"
                 android:id="@+id/btn_createaccount"
                 android:background="@drawable/btn_corner_white"
-                android:textColor="@color/primaryRedColor"
+                android:textColor="@color/primaryWhiteColor"
                 android:textAllCaps="false"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/helvetica"
-                android:onClick="tapToCreateAccount"/>
+                android:onClick="tapToCreateAccount" android:textStyle="bold"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AppWong</string>
+    <string name="app_name">Spanish Pocket</string>
     <string name="lbl_greeting">¡Hola!</string>
     <string name="lbl_welcome">te damos la bienvenida</string>
     <string name="ph_txt_email">Correo Electronico</string>
@@ -11,4 +11,5 @@
     <string name="msg_cancel">Cancelar</string>
     <string name="lbl_registertitle">Crear Cuenta</string>
     <string name="btn_createaccount">Crear Cuenta</string>
+    <string name="retype_password">Repetir Contraseña</string>
 </resources>

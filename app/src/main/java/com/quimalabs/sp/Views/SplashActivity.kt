@@ -1,10 +1,10 @@
-package com.tcs.app.Views
+package com.quimalabs.sp.Views
 
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.tcs.app.R
-import com.tcs.app.ViewModels.SplashViewModel
+import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.SplashViewModel
 
 class SplashActivity : AppCompatActivity() {
     lateinit var viewModel:SplashViewModel
@@ -14,7 +14,9 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         viewModel = ViewModelProviders.of(this).get(SplashViewModel::class.java)
-        viewModel.goToHome(this)
+        //hay que mejorar
+        viewModel.goToLogIn(this,this)
+
     }
 
 }

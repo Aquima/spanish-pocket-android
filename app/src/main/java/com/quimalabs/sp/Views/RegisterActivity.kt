@@ -1,13 +1,13 @@
-package com.tcs.app.Views
+package com.quimalabs.sp.Views
 
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.tcs.app.Models.WongUser
-import com.tcs.app.R
-import com.tcs.app.ViewModels.RegisterViewModel
+import com.quimalabs.sp.Models.WongUser
+import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.RegisterViewModel
 import kotlinx.android.synthetic.main.activity_log_in.*
 
 class RegisterActivity : AppCompatActivity() {

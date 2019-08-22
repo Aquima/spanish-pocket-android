@@ -1,16 +1,18 @@
-package com.tcs.app.Views
+package com.quimalabs.sp.Views
 
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.widget.Toast
 import com.jakewharton.rxbinding3.view.clicks
 import com.jakewharton.rxbinding3.widget.textChanges
-import com.tcs.app.Models.WongUser
-import com.tcs.app.R
-import com.tcs.app.ViewModels.LogInViewModel
+import com.quimalabs.sp.Models.WongUser
+import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.LogInViewModel
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import kotlinx.android.synthetic.main.activity_log_in.*
@@ -52,7 +54,7 @@ class LogInActivity : AppCompatActivity() {
             if (it == true) {
                 btn_login.visibility = View.VISIBLE
             }else{
-                btn_login.visibility = View.INVISIBLE
+                btn_login.visibility = View.GONE
             }
         }
         
@@ -61,7 +63,13 @@ class LogInActivity : AppCompatActivity() {
             val email = txt_email.text.toString()
             val password = txt_password.text.toString()
             viewModel.signIn(email,password,this).subscribe({user:WongUser ->
-                Toast.makeText(this, "Hola ${user.email}, has iniciado Sesión" , Toast.LENGTH_LONG).show()
+               // Toast.makeText(this, "Hola ${user.email}, has iniciado Sesión" , Toast.LENGTH_LONG).show()
+
+                Handler(Looper.getMainLooper()).post {
+                    // your codes here run on main Thread
+                    goToHome()
+                }
+
             },{error ->
                 Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
             })
@@ -77,5 +85,10 @@ class LogInActivity : AppCompatActivity() {
         },{error ->
             Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
+    }
+    fun goToHome(){
+
+            viewModel.goToHome(this,this)
+
     }
 }

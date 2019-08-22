@@ -1,6 +1,6 @@
-package com.tcs.app
+package com.quimalabs.sp
 
-import com.tcs.app.Models.LogInModel
+import com.quimalabs.sp.Models.LogInModel
 import org.junit.Test
 
 import org.junit.Assert.*

@@ -5,20 +5,9 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/primaryRedColor"
+        android:background="@color/primaryWhiteColor"
         tools:context=".Views.LogInActivity">
-    <ImageButton
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/img_close"
-            android:id="@+id/btn_close"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginLeft="55dp"
-            android:layout_marginStart="55dp"
-            android:background="@null"
-            android:layout_marginTop="10dp" tools:ignore="VectorDrawableCompat"/>
+
     <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -29,54 +18,16 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp" tools:ignore="VectorDrawableCompat"/>
 
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/img_logo"
-            android:id="@+id/linearLayoutA">
 
-        <TextView
-                android:text="@string/lbl_greeting"
-                android:id="@+id/lbl_greeting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/img_logo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textColor="@color/primaryWhiteColor"
-                android:textSize="40dp"
-                android:fontFamily="@font/helvetica"
-                android:layout_gravity="center"/>
-        <TextView
-                android:text="@string/lbl_welcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/lbl_welcome"
-                app:layout_constraintTop_toBottomOf="@+id/lbl_greeting"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:textColor="@color/primaryWhiteColor"
-                android:textSize="20dp"
-                android:fontFamily="@font/helvetica"
-                android:layout_gravity="center"/>
-    </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutA"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo"
+
             android:id="@+id/linearLayoutB">
         <EditText
                 android:layout_width="350dp"
@@ -85,8 +36,8 @@
                 android:ems="10"
                 android:id="@+id/txt_email"
                 android:hint="@string/ph_txt_email"
-                android:textColor="@color/primaryWhiteColor"
-                android:textColorHint="@color/primaryWhiteColor"
+                android:textColor="@color/colorGreen"
+                android:textColorHint="@color/hintTextColor"
                 android:textCursorDrawable="@drawable/color_cursor_drawable"
                 android:background="@null"
                 android:fontFamily="@font/helvetica"
@@ -94,7 +45,7 @@
         <View
                 android:layout_width="330dp"
                 android:layout_height="1dp"
-                android:background="@color/primaryWhiteColor"
+                android:background="@color/colorGreen"
                 android:layout_marginLeft="15dp"/>
 
         <EditText
@@ -104,8 +55,8 @@
                 android:ems="10"
                 android:id="@+id/txt_password"
                 android:hint="@string/ph_txt_password"
-                android:textColor="@color/primaryWhiteColor"
-                android:textColorHint="@color/primaryWhiteColor"
+                android:textColor="@color/colorGreen"
+                android:textColorHint="@color/hintTextColor"
                 android:textCursorDrawable="@drawable/color_cursor_drawable"
                 android:background="@null"
                 android:fontFamily="@font/helvetica"
@@ -118,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutB"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="10dp">
+    >
         <Button
                 android:text="@string/btn_login"
                 android:layout_width="280dp"
@@ -126,30 +77,30 @@
                 android:id="@+id/btn_login"
                 android:visibility="gone"
                 android:background="@drawable/btn_corner_white"
-                android:textColor="@color/primaryRedColor"
+                android:textColor="@color/primaryWhiteColor"
                 android:textAllCaps="false"
                 android:fontFamily="@font/helvetica"
                 android:layout_marginBottom="10dp"
-                />
+                android:textStyle="bold"/>
         <Button
                 android:text="@string/btn_newaccount"
                 android:layout_width="280dp"
                 android:layout_height="45dp"
                 android:id="@+id/btn_newaccount"
                 android:background="@drawable/btn_corner_red"
-                android:textColor="@color/primaryWhiteColor"
+                android:textColor="@color/colorGreen"
                 android:textAllCaps="false"
                 android:fontFamily="@font/helvetica"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp" android:textStyle="bold"/>
         <Button
                 android:text="@string/btn_recoverypass"
                 android:layout_width="280dp"
                 android:layout_height="45dp"
                 android:id="@+id/btn_recoverypass"
                 android:background="@drawable/btn_corner_red"
-                android:textColor="@color/primaryWhiteColor"
+                android:textColor="@color/colorGreen"
                 android:textAllCaps="false"
                 android:fontFamily="@font/helvetica"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp" android:textStyle="bold"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

@@ -6,4 +6,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorNubita">#D81B60</color>
+    <color name="colorGreen">#34b1a4</color>
+    <color name="colorDarkGreen">#3b5059</color>
+    <color name="hintTextColor">#B6BBBB</color>
+    <color name="redPastelColor">#ce596f</color>
+
 </resources>

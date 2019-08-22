@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Views.SplashActivity"
-        android:background="@color/primaryRedColor">
+        android:background="@color/primaryWhiteColor">
 
     <ImageView
             android:layout_width="200dp"
@@ -17,5 +17,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-    />
+            tools:ignore="VectorDrawableCompat"/>
 </android.support.constraint.ConstraintLayout>
