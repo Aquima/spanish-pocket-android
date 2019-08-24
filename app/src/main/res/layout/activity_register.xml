@@ -124,7 +124,7 @@
                 android:layout_width="280dp"
                 android:layout_height="45dp"
                 android:id="@+id/btn_createaccount"
-                android:background="@drawable/btn_corner_white"
+                android:background="@drawable/btn_corner_green_ligth"
                 android:textColor="@color/primaryWhiteColor"
                 android:textAllCaps="false"
                 android:layout_marginBottom="10dp"

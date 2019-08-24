@@ -7,8 +7,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorNubita">#D81B60</color>
     <color name="colorGreen">#34b1a4</color>
-    <color name="colorDarkGreen">#3b5059</color>
+    <color name="colorDarkGreen">#455A64</color>
     <color name="hintTextColor">#B6BBBB</color>
-    <color name="redPastelColor">#ce596f</color>
+    <color name="redPastelColor">#CF6679</color>
 
 </resources>
