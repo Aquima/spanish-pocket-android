@@ -10,5 +10,7 @@
     <color name="colorDarkGreen">#455A64</color>
     <color name="hintTextColor">#B6BBBB</color>
     <color name="redPastelColor">#CF6679</color>
-
+    <color name="colorLead">#999999</color>
+    <color name="colorDarkLead">#8F9CA1</color>
+    <color name="colorBackground">#F5F5F5</color>
 </resources>
