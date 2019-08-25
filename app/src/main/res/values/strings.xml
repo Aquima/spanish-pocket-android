@@ -12,4 +12,9 @@
     <string name="lbl_registertitle">Crear Cuenta</string>
     <string name="btn_createaccount">Crear Cuenta</string>
     <string name="retype_password">Repetir Contraseña</string>
+    <string name="title_score">Get to 5 or more to change their color!</string>
+    <string name="btn_present">Presente</string>
+    <string name="btn_simple_past">Pasado simple</string>
+    <string name="btn_imp_past">Pasado imp.</string>
+    <string name="btn_future">Futuro</string>
 </resources>

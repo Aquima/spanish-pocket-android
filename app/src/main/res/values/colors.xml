@@ -13,4 +13,7 @@
     <color name="colorLead">#999999</color>
     <color name="colorDarkLead">#8F9CA1</color>
     <color name="colorBackground">#F5F5F5</color>
+    <color name="colorBackgroundKeyboard">#2E2E2E</color>
+    <color name="colorHintKeyboard">#9E9E9E</color>
+    <color name="colorKeyboard">#717171</color>
 </resources>
