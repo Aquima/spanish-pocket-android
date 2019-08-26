@@ -4,8 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBackground"
-        tools:context=".Views.TestPresentActivity">
+        tools:context=".Views.TestImpPastActivity">
     <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
@@ -21,18 +20,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        <Button
                 android:id="@+id/imageView8"
                 android:layout_width="17dp"
                 android:layout_height="25dp"
-                android:src="@color/colorAccent" />
+                android:onClick="impPastBack"
+                android:background="@color/colorAccent" />
 
         <TextView
                 android:id="@+id/title_present"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/title_present"
+                android:text="@string/title_imp_past"
                 android:textAllCaps="true"
                 android:textAlignment="center"
                 android:textColor="@color/colorGreen"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="53dp"
-            android:text="Tú"
+            android:text="Ustedes"
             android:textColor="@color/colorDarkGreen"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="63dp"
-            android:text="VIVIR"
+            android:text="ESCRIBIR"
             android:textColor="@color/colorGreen"
             android:textSize="47sp"
             android:textStyle="bold"
@@ -86,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
-            android:text="@string/title_present"
+            android:text="@string/title_imp_past"
             android:textColor="@color/colorDarkGreen"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"

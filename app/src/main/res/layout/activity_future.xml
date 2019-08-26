@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Views.PresentActivity" android:background="@color/colorBackground">
-
+        tools:context=".Views.FutureActivity">
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="340dp"
@@ -19,11 +17,11 @@
         <Button
                 android:layout_width="16dp"
                 android:layout_height="27dp"
-                android:onClick="backScores"
-                android:background="@color/colorAccent" android:id="@+id/btn_back"
+                android:onClick="backStores"
+                android:background="@color/colorAccent" android:id="@+id/imageView4"
                 android:layout_weight="1" android:layout_marginTop="14dp"/>
         <TextView
-                android:text="@string/title_how_is_present"
+                android:text="@string/title_how_is_future"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -45,7 +43,7 @@
                 android:layout_height="1dp" android:id="@+id/view" android:layout_weight="1"
                 android:background="@color/colorDarkLead"/>
         <Button
-                android:id="@+id/btn_refresh"
+                android:id="@+id/btn_test_future"
                 android:layout_width="33dp"
                 android:layout_height="33dp" android:layout_weight="1"/>
         <View
@@ -61,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="21dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:id="@+id/linearLayout4"
-    >
+            >
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
@@ -72,15 +70,17 @@
                     android:layout_height="12dp" android:background="@drawable/circle_green"
                     android:id="@+id/imageView5" android:layout_weight="1"/>
             <TextView
-                    android:text="HABL"
+                    android:text="HABLAR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtFirstPronouns" android:layout_weight="1"
                     android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
             <TextView
-                    android:text="AR"
+                    android:text="É"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtFirstComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtFirstComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -92,15 +92,17 @@
                     android:layout_height="12dp" android:background="@drawable/circle_green"
                     android:id="@+id/imageView6" android:layout_weight="1"/>
             <TextView
-                    android:text="COM"
+                    android:text="COMER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtSecondPronouns" android:layout_weight="1"
                     android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
             <TextView
-                    android:text="ER"
+                    android:text="É"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtSecondComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtSecondComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -112,15 +114,17 @@
                     android:layout_height="12dp" android:background="@drawable/circle_green"
                     android:id="@+id/imageView7" android:layout_weight="1"/>
             <TextView
-                    android:text="VIV"
+                    android:text="VIVIR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtThirdPronouns" android:layout_weight="1"
                     android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
             <TextView
-                    android:text="IR"
+                    android:text="É"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtThirdComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtThirdComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -138,7 +142,7 @@
                     android:text="@string/btn_pronouns1"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:onClick="firsthPronouns"
+                    android:onClick="futureComplete"
                     android:id="@+id/btn_first"
                     android:background="@drawable/btn_pronouns" android:textSize="24sp"
                     android:textColor="@color/primaryWhiteColor" android:textStyle="bold"/>
