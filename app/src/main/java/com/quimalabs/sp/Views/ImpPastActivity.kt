@@ -14,7 +14,7 @@ class ImpPastActivity : AppCompatActivity() {
         setContentView(R.layout.activity_imp_past)
 
         this.btn_test_imp_past.setOnClickListener {
-            val intent = Intent(this, ImpPastActivity::class.java)
+            val intent = Intent(this, TestImpPastActivity::class.java)
             startActivity(intent)
         }
     }

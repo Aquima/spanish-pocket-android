@@ -13,7 +13,8 @@ class PresentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_present)
-        this.btn_refresh.setOnClickListener {
+
+        this.btn_test_present.setOnClickListener {
             val intent = Intent(this, TestPresentActivity::class.java)
             startActivity(intent)
         }

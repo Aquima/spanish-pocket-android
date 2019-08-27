@@ -3,6 +3,7 @@ package com.quimalabs.sp.Views
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.quimalabs.sp.R
 import kotlinx.android.synthetic.main.activity_test_present.*
 
@@ -12,5 +13,9 @@ class TestPresentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_present)
 
+    }
+
+    fun backPresent(view: View) {
+        this.onBackPressed()
     }
 }

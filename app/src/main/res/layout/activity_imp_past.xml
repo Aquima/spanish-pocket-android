@@ -5,29 +5,45 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Views.ImpPastActivity">
+
     <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="36dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginLeft="20dp" android:layout_marginStart="20dp" android:layout_marginRight="11dp"
-            android:layout_marginEnd="11dp" android:id="@+id/linearLayout">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
         <Button
-                android:layout_width="16dp"
-                android:layout_height="27dp"
-                android:onClick="backScores"
-                android:background="@color/colorAccent" android:id="@+id/imageView4"
-                android:layout_weight="1" android:layout_marginTop="14dp"/>
+                android:id="@+id/imageView4"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="14dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_chevron_left"
+                android:onClick="backScores" />
+
         <TextView
-                android:text="@string/title_how_is_imp_past"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
-                android:id="@+id/textView2" android:layout_weight="1"
-                android:textColor="@color/colorDarkGreen" android:textSize="42sp" android:textAllCaps="false"
-                android:layout_marginLeft="14dp" android:textIsSelectable="false" android:gravity="right"/>
+                android:layout_marginLeft="14dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/title_how_is_imp_past"
+                android:textAllCaps="false"
+                android:textColor="@color/colorDarkGreen"
+                android:textIsSelectable="false"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/old_standard_tt" />
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -74,12 +90,16 @@
                     android:text="HABL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtFirstPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
             <TextView
                     android:text="AR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtFirstComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:textSize="50sp" android:textColor="@color/colorLead"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -94,12 +114,16 @@
                     android:text="COM"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtSecondPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
             <TextView
                     android:text="ER"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtSecondComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:textSize="50sp" android:textColor="@color/colorLead"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="horizontal"
@@ -114,12 +138,16 @@
                     android:text="VIV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtThirdPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
             <TextView
                     android:text="IR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/txtThirdComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorLead"/>
+                    android:textSize="50sp" android:textColor="@color/colorLead"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -137,19 +165,25 @@
                     android:text="@string/btn_pronouns1"
                     android:layout_width="100dp"
                     android:layout_height="100dp" android:id="@+id/btn_first"
-                    android:background="@drawable/btn_pronouns" android:textSize="24sp"
-                    android:textColor="@color/primaryWhiteColor" android:textStyle="bold"/>
+                    android:background="@drawable/btn_pronouns" android:textSize="23sp"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
             <Button
                     android:text="@string/btn_pronouns2"
                     android:layout_width="100dp"
                     android:layout_height="100dp" android:id="@+id/btn_second"
                     android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
-                    android:textSize="24sp" android:textColor="@color/primaryWhiteColor" android:textStyle="bold"/>
+                    android:textSize="23sp" android:textColor="@color/primaryWhiteColor"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
             <Button
                     android:layout_width="100dp"
                     android:layout_height="100dp" android:id="@+id/btn_third"
                     android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
-                    android:textSize="17sp" android:textColor="@color/primaryWhiteColor" android:textStyle="bold"
+                    android:textSize="16sp" android:textColor="@color/primaryWhiteColor"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic"
                     android:text="@string/btn_pronouns3"/>
         </LinearLayout>
         <LinearLayout
@@ -161,14 +195,18 @@
                     android:text="@string/btn_pronouns4"
                     android:layout_width="120dp"
                     android:layout_height="120dp" android:id="@+id/btn_quarter"
-                    android:background="@drawable/btn_pronouns" android:textStyle="bold" android:textSize="16sp"
-                    android:textColor="@color/primaryWhiteColor"/>
+                    android:background="@drawable/btn_pronouns" android:textSize="16sp"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
             <Button
                     android:text="@string/btn_pronouns5"
                     android:layout_width="120dp"
                     android:layout_height="120dp" android:id="@+id/btn_fifth"
                     android:layout_marginLeft="13dp" android:background="@drawable/btn_pronouns"
-                    android:textColor="@color/primaryWhiteColor" android:textStyle="bold" android:textSize="14sp"/>
+                    android:textColor="@color/primaryWhiteColor" android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
