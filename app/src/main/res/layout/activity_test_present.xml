@@ -62,7 +62,7 @@
             android:id="@+id/txt_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="30dp"
             android:text="VIVIR"
             android:textColor="@color/colorGreen"
             android:textSize="47sp"
@@ -76,7 +76,7 @@
             android:layout_width="52dp"
             android:layout_height="22dp"
             android:layout_marginTop="15dp"
-            android:theme="@style/SwitchCompatTheme"
+            android:checked="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_test" />
@@ -96,22 +96,20 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="50dp"
             android:background="@color/colorBackgroundKeyboard"
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_present">
+            app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp"
-                android:orientation="vertical"
-                android:layout_marginBottom="4dp">
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical">
 
             <TextView
                     android:id="@+id/editText"
@@ -122,6 +120,7 @@
                     android:textColor="@color/primaryWhiteColor"
                     android:textColorHint="@color/colorHintKeyboard"
                     android:textSize="24sp" />
+
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -377,11 +376,17 @@
                 android:layout_marginRight="6dp"
                 android:orientation="horizontal">
 
-            <view
+
+            <Button
+                    android:id="@+id/btn_white"
                     android:layout_width="54dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorBackgroundKeyboard"
-                    tools:visibility="invisible"></view>
+                    android:background="@drawable/btn_keyboard"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
 
             <Button
                     android:id="@+id/btn_z"
@@ -460,11 +465,16 @@
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="18sp" />
 
-            <view
+            <Button
+                    android:id="@+id/btn_hide"
                     android:layout_width="53dp"
                     android:layout_height="match_parent"
-                    android:background="@color/colorBackgroundKeyboard"
-                    tools:visibility="invisible"></view>
+                    android:background="@drawable/btn_keyboard"
+                    android:text=""
+                    android:textAllCaps="false"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textSize="18sp"
+                    android:visibility="invisible" />
         </LinearLayout>
 
         <LinearLayout
