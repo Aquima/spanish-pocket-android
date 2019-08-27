@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Views.FutureActivity">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="20dp" android:layout_marginStart="20dp" android:layout_marginRight="11dp"
+            android:layout_marginEnd="11dp" android:id="@+id/linearLayout">
+        <Button
+                android:layout_width="16dp"
+                android:layout_height="27dp"
+                android:onClick="backStores"
+                android:background="@color/colorAccent" android:id="@+id/imageView4"
+                android:layout_weight="1" android:layout_marginTop="14dp"/>
+        <TextView
+                android:text="@string/title_how_is_future"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:id="@+id/textView2" android:layout_weight="1"
+                android:textColor="@color/colorDarkGreen" android:textSize="42sp" android:textAllCaps="false"
+                android:layout_marginLeft="14dp" android:textIsSelectable="false" android:gravity="right"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" android:gravity="center"
+            android:id="@+id/linearLayout2">
+        <View
+                android:layout_width="142dp"
+                android:layout_height="1dp" android:id="@+id/view" android:layout_weight="1"
+                android:background="@color/colorDarkLead"/>
+        <Button
+                android:id="@+id/btn_test_future"
+                android:layout_width="33dp"
+                android:layout_height="33dp" android:layout_weight="1"/>
+        <View
+                android:layout_width="142dp"
+                android:layout_height="1dp" android:id="@+id/view2" android:layout_weight="1"
+                android:background="@color/colorDarkLead"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:id="@+id/linearLayout4"
+            >
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" android:background="@drawable/circle_green"
+                    android:id="@+id/imageView5" android:layout_weight="1"/>
+            <TextView
+                    android:text="HABLAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txtFirstPronouns" android:layout_weight="1"
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+            <TextView
+                    android:text="É"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtFirstComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:gravity="center"
+                android:layout_marginTop="5dp">
+            <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" android:background="@drawable/circle_green"
+                    android:id="@+id/imageView6" android:layout_weight="1"/>
+            <TextView
+                    android:text="COMER"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txtSecondPronouns" android:layout_weight="1"
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+            <TextView
+                    android:text="É"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtSecondComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:gravity="center"
+                android:layout_marginTop="5dp">
+            <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp" android:background="@drawable/circle_green"
+                    android:id="@+id/imageView7" android:layout_weight="1"/>
+            <TextView
+                    android:text="VIVIR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txtThirdPronouns" android:layout_weight="1"
+                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"/>
+            <TextView
+                    android:text="É"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:id="@+id/txtThirdComplete" android:layout_weight="1"
+                    android:textSize="50sp" android:textColor="@color/colorGreen"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <Button
+                    android:text="@string/btn_pronouns1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:onClick="futureComplete"
+                    android:id="@+id/btn_first"
+                    android:background="@drawable/btn_pronouns" android:textSize="24sp"
+                    android:textColor="@color/primaryWhiteColor" android:textStyle="bold"/>
+            <Button
+                    android:text="@string/btn_pronouns2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/btn_second"
+                    android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
+                    android:textSize="24sp" android:textColor="@color/primaryWhiteColor" android:textStyle="bold"/>
+            <Button
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/btn_third"
+                    android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
+                    android:textSize="17sp" android:textColor="@color/primaryWhiteColor" android:textStyle="bold"
+                    android:text="@string/btn_pronouns3"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp">
+            <Button
+                    android:text="@string/btn_pronouns4"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/btn_quarter"
+                    android:background="@drawable/btn_pronouns" android:textStyle="bold" android:textSize="16sp"
+                    android:textColor="@color/primaryWhiteColor"/>
+            <Button
+                    android:text="@string/btn_pronouns5"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" android:id="@+id/btn_fifth"
+                    android:layout_marginLeft="13dp" android:background="@drawable/btn_pronouns"
+                    android:textColor="@color/primaryWhiteColor" android:textStyle="bold" android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -13,4 +13,22 @@
     <string name="lbl_registertitle">Create Account</string>
     <string name="btn_createaccount">Create Account</string>
     <string name="retype_password">Confirm Password</string>
+    <string name="title_score">Get to 5 or more to change their color!</string>
+    <string name="btn_present">Present</string>
+    <string name="btn_simple_past">Simple Past</string>
+    <string name="btn_imp_past">Past imp.</string>
+    <string name="btn_future">Future</string>
+    <string name="title_how_is_present">¿How does work PRESENT?</string>
+    <string name="btn_pronouns1">I</string>
+    <string name="btn_pronouns2">You</string>
+    <string name="btn_pronouns3">THE\nSHE\nYOU</string>
+    <string name="btn_pronouns4">Nosotros</string>
+    <string name="btn_pronouns5">THEY\nWE\nYOUR</string>
+    <string name="title_how_is_simple_past">¿How does work SIMPLE PAST?</string>
+    <string name="title_how_is_imp_past">¿How does work IMPERFECT PAST?</string>
+    <string name="title_how_is_future">¿How does work FUTURE?</string>
+    <string name="title_simple_past">Simple Past</string>
+    <string name="title_imp_past">Imperfect Past</string>
+    <string name="title_future">Future</string>
+    <string name="title_present">Present</string>
 </resources>

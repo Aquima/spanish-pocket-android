@@ -4,7 +4,7 @@
             android:radius="@dimen/corner_value"
     />
     <solid
-            android:color= "@color/primaryWhiteColor"
+            android:color="@color/colorGreen"
     />
     <padding
             android:left="0dp"

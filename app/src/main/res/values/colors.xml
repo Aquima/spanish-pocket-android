@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="primaryRedColor">#C01717</color>
     <color name="primaryWhiteColor">#FFFFFF</color>
     <color name="colorPrimary">#008577</color>
@@ -7,8 +7,13 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorNubita">#D81B60</color>
     <color name="colorGreen">#34b1a4</color>
-    <color name="colorDarkGreen">#3b5059</color>
+    <color name="colorDarkGreen">#455A64</color>
     <color name="hintTextColor">#B6BBBB</color>
-    <color name="redPastelColor">#ce596f</color>
-
+    <color name="redPastelColor">#CF6679</color>
+    <color name="colorLead">#999999</color>
+    <color name="colorDarkLead">#8F9CA1</color>
+    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorBackgroundKeyboard">#2E2E2E</color>
+    <color name="colorHintKeyboard">#9E9E9E</color>
+    <color name="colorKeyboard" tools:ignore="MissingDefaultResource">#717171</color>
 </resources>
