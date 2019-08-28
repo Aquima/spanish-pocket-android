@@ -4,6 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackground"
         tools:context=".Views.FutureActivity">
 
     <LinearLayout
@@ -12,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
@@ -45,175 +46,257 @@
                 android:textStyle="bold"
                 app:fontFamily="@font/old_standard_tt" />
     </LinearLayout>
+
     <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" android:gravity="center"
-            android:id="@+id/linearLayout2">
-        <View
-                android:layout_width="142dp"
-                android:layout_height="1dp" android:id="@+id/view" android:layout_weight="1"
-                android:background="@color/colorDarkLead"/>
-        <Button
-                android:id="@+id/btn_test_future"
-                android:layout_width="33dp"
-                android:layout_height="33dp" android:layout_weight="1"/>
-        <View
-                android:layout_width="142dp"
-                android:layout_height="1dp" android:id="@+id/view2" android:layout_weight="1"
-                android:background="@color/colorDarkLead"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="21dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" android:id="@+id/linearLayout4"
-            >
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <View
+                android:id="@+id/view"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorDarkLead" />
+
         <LinearLayout
-                android:orientation="horizontal"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_green"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            <Button
+                    android:id="@+id/btn_test_future"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_redo" />
+        </LinearLayout>
+
+        <View
+                android:id="@+id/view2"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="@color/colorDarkLead" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
+
             <ImageView
+                    android:id="@+id/imageView5"
                     android:layout_width="12dp"
-                    android:layout_height="12dp" android:background="@drawable/circle_green"
-                    android:id="@+id/imageView5" android:layout_weight="1"/>
+                    android:layout_height="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle_green" />
+
             <TextView
+                    android:id="@+id/txtFirstPronouns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
                     android:text="HABLAR"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtFirstPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
+                    android:textColor="@color/colorDarkGreen"
+                    android:textSize="50sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
+
             <TextView
-                    android:text="É"
+                    android:id="@+id/txtFirstComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    android:id="@+id/txtFirstComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorGreen"
+                    android:layout_weight="1"
+                    android:text="É"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="50sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    android:visibility="invisible"
+                    app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:gravity="center"
-                android:layout_marginTop="5dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
             <ImageView
+                    android:id="@+id/imageView6"
                     android:layout_width="12dp"
-                    android:layout_height="12dp" android:background="@drawable/circle_green"
-                    android:id="@+id/imageView6" android:layout_weight="1"/>
+                    android:layout_height="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle_green" />
+
             <TextView
+                    android:id="@+id/txtSecondPronouns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
                     android:text="COMER"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtSecondPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
+                    android:textColor="@color/colorDarkGreen"
+                    android:textSize="50sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
+
             <TextView
-                    android:text="É"
+                    android:id="@+id/txtSecondComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    android:id="@+id/txtSecondComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorGreen"
+                    android:layout_weight="1"
+                    android:text="É"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="50sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    android:visibility="invisible"
+                    app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:gravity="center"
-                android:layout_marginTop="5dp">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
             <ImageView
+                    android:id="@+id/imageView7"
                     android:layout_width="12dp"
-                    android:layout_height="12dp" android:background="@drawable/circle_green"
-                    android:id="@+id/imageView7" android:layout_weight="1"/>
+                    android:layout_height="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/circle_green" />
+
             <TextView
-                    android:text="VIVIR"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/txtThirdPronouns" android:layout_weight="1"
-                    android:textSize="50sp" android:layout_marginLeft="6dp" android:textColor="@color/colorDarkGreen"
-                    android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
-            <TextView
-                    android:text="É"
+                    android:id="@+id/txtThirdPronouns"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:visibility="invisible"
-                    android:id="@+id/txtThirdComplete" android:layout_weight="1"
-                    android:textSize="50sp" android:textColor="@color/colorGreen"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:text="VIVIR"
+                    android:textColor="@color/colorDarkGreen"
+                    android:textSize="50sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
+
+            <TextView
+                    android:id="@+id/txtThirdComplete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="É"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="50sp"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            android:gravity="center">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
             <Button
-                    android:text="@string/btn_pronouns1"
+                    android:id="@+id/btn_first"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
+                    android:background="@drawable/btn_pronouns"
                     android:onClick="futureComplete"
-                    android:id="@+id/btn_first"
-                    android:background="@drawable/btn_pronouns" android:textSize="23sp"
+                    android:text="@string/btn_pronouns1"
                     android:textColor="@color/primaryWhiteColor"
+                    android:textSize="23sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic" />
+
             <Button
+                    android:id="@+id/btn_second"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/btn_pronouns"
                     android:text="@string/btn_pronouns2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp" android:id="@+id/btn_second"
-                    android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
-                    android:textSize="23sp" android:textColor="@color/primaryWhiteColor"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textSize="23sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic" />
+
             <Button
+                    android:id="@+id/btn_third"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" android:id="@+id/btn_third"
-                    android:background="@drawable/btn_pronouns" android:layout_marginLeft="13dp"
-                    android:textSize="16sp" android:textColor="@color/primaryWhiteColor"
+                    android:layout_height="100dp"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/btn_pronouns"
                     android:text="@string/btn_pronouns3"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="21dp">
+                android:layout_marginTop="21dp"
+                android:orientation="horizontal">
+
             <Button
+                    android:id="@+id/btn_quarter"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/btn_pronouns"
                     android:text="@string/btn_pronouns4"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp" android:id="@+id/btn_quarter"
-                    android:background="@drawable/btn_pronouns" android:textSize="16sp"
                     android:textColor="@color/primaryWhiteColor"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic" />
+
             <Button
-                    android:text="@string/btn_pronouns5"
+                    android:id="@+id/btn_fifth"
                     android:layout_width="120dp"
-                    android:layout_height="120dp" android:id="@+id/btn_fifth"
-                    android:layout_marginLeft="13dp" android:background="@drawable/btn_pronouns"
-                    android:textColor="@color/primaryWhiteColor" android:textSize="16sp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="fill"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/btn_pronouns"
+                    android:text="@string/btn_pronouns5"
+                    android:textColor="@color/primaryWhiteColor"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/cormorant_garamond_semibold_italic"/>
+                    app:fontFamily="@font/cormorant_garamond_semibold_italic" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

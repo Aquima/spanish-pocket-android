@@ -4,14 +4,16 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackground"
         tools:context=".Views.TestImpPastActivity">
+
     <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="13dp"
             android:layout_marginRight="13dp"
             android:gravity="center"
@@ -49,14 +51,14 @@
                 android:text="1"
                 android:textColor="@color/primaryWhiteColor"
                 android:textSize="13sp"
-                app:fontFamily="@font/pavanam"/>
+                app:fontFamily="@font/pavanam" />
     </LinearLayout>
 
     <TextView
             android:id="@+id/txt_pronouns"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="50dp"
             android:text="Ustedes"
             android:textColor="@color/colorDarkGreen"
             android:textSize="20sp"
@@ -70,7 +72,7 @@
             android:id="@+id/txt_test"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="30dp"
             android:text="ESCRIBIR"
             android:textColor="@color/colorGreen"
             android:textSize="40sp"
@@ -162,7 +164,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_w"
@@ -174,7 +176,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_e"
@@ -186,7 +188,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_r"
@@ -198,7 +200,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_t"
@@ -210,7 +212,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_y"
@@ -222,7 +224,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_u"
@@ -234,7 +236,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_i"
@@ -246,7 +248,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_o"
@@ -258,7 +260,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_p"
@@ -270,7 +272,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
 
         <LinearLayout
@@ -291,7 +293,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_s"
@@ -303,7 +305,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_d"
@@ -315,7 +317,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_f"
@@ -327,7 +329,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_g"
@@ -339,7 +341,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_h"
@@ -363,7 +365,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_k"
@@ -375,7 +377,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_l"
@@ -387,7 +389,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_ñ"
@@ -399,7 +401,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
 
         <LinearLayout
@@ -426,7 +428,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_x"
@@ -438,7 +440,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_c"
@@ -450,7 +452,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_v"
@@ -462,7 +464,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/bn_b"
@@ -474,7 +476,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_n"
@@ -486,7 +488,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_m"
@@ -498,7 +500,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_right"
@@ -538,7 +540,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        app:fontFamily="@font/old_standard_tt"/>
+                        app:fontFamily="@font/old_standard_tt" />
 
                 <Button
                         android:id="@+id/btn_E"
@@ -551,7 +553,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        app:fontFamily="@font/old_standard_tt"/>
+                        app:fontFamily="@font/old_standard_tt" />
 
                 <Button
                         android:id="@+id/btn_I"
@@ -564,7 +566,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        app:fontFamily="@font/old_standard_tt"/>
+                        app:fontFamily="@font/old_standard_tt" />
 
                 <Button
                         android:id="@+id/btn_O"
@@ -577,7 +579,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        app:fontFamily="@font/old_standard_tt"/>
+                        app:fontFamily="@font/old_standard_tt" />
 
                 <Button
                         android:id="@+id/btn_U"
@@ -590,7 +592,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        app:fontFamily="@font/old_standard_tt"/>
+                        app:fontFamily="@font/old_standard_tt" />
             </LinearLayout>
 
             <Button

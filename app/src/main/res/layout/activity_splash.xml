@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Views.SplashActivity"
-        android:background="@color/primaryWhiteColor">
+        android:background="@color/colorGreen"
+        tools:context=".Views.SplashActivity">
 
     <ImageView
+            android:id="@+id/imageView"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:srcCompat="@drawable/logo"
-            android:id="@+id/imageView"
+            android:background="@color/colorBackground"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="VectorDrawableCompat"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VectorDrawableCompat"
+            tools:srcCompat="@drawable/ic_logo_transpte" />
 </android.support.constraint.ConstraintLayout>

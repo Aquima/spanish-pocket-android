@@ -14,6 +14,9 @@ class ImpPastActivity : AppCompatActivity() {
         setContentView(R.layout.activity_imp_past)
 
         this.btn_test_imp_past.setOnClickListener {
+
+            btn_test_imp_past.animate().rotation(btn_test_imp_past.getRotation()-360).start()
+
             val intent = Intent(this, TestImpPastActivity::class.java)
             startActivity(intent)
         }

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBackground"
         tools:context=".Views.ScoreActivity">
 
     <TextView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="63dp"
+            android:layout_marginTop="40dp"
             android:src="@color/colorAccent"
             android:text="VERBOS"
             android:textColor="@color/colorGreen"
@@ -21,28 +21,35 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-            android:text="@string/title_score"
+            android:id="@+id/textView"
             android:layout_width="322dp"
             android:layout_height="47dp"
-            android:id="@+id/textView" android:layout_marginTop="25dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_corner_green_ligth"
+            android:gravity="center"
+            android:text="@string/title_score"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/btn_corner_green_ligth" android:textColor="@color/primaryWhiteColor"
-            android:textSize="17sp" android:gravity="center"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
     <LinearLayout
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
             <Button
                     android:id="@+id/btn_present"
@@ -54,23 +61,26 @@
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:fontFamily="@font/old_standard_tt" />
+
             <TextView
                     android:id="@+id/img_present"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@drawable/circle_red"
                     android:gravity="center"
-                    android:text="1"
-                    android:layout_marginLeft="12dp"
+                    android:text="0"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="18sp"
-                    app:fontFamily="@font/pavanam"/>
+                    app:fontFamily="@font/pavanam" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center" android:layout_marginTop="45dp">
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
             <Button
                     android:id="@+id/btn_simple_past"
@@ -82,23 +92,26 @@
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:fontFamily="@font/old_standard_tt" />
+
             <TextView
                     android:id="@+id/img_simple_past"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@drawable/circle_red"
                     android:gravity="center"
-                    android:text="1"
-                    android:layout_marginLeft="12dp"
+                    android:text="0"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="18sp"
-                    app:fontFamily="@font/pavanam"/>
+                    app:fontFamily="@font/pavanam" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center" android:layout_marginTop="45dp">
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
             <Button
                     android:id="@+id/btn_pas_imp"
@@ -110,23 +123,26 @@
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:fontFamily="@font/old_standard_tt" />
+
             <TextView
                     android:id="@+id/img_pas_imp"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@drawable/circle_red"
                     android:gravity="center"
-                    android:text="1"
-                    android:layout_marginLeft="12dp"
+                    android:text="0"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="18sp"
-                    app:fontFamily="@font/pavanam"/>
+                    app:fontFamily="@font/pavanam" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center" android:layout_marginTop="45dp">
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
             <Button
                     android:id="@+id/btn_future"
@@ -138,17 +154,18 @@
                     android:textSize="20sp"
                     android:textStyle="italic"
                     app:fontFamily="@font/old_standard_tt" />
+
             <TextView
                     android:id="@+id/img_future"
                     android:layout_width="42dp"
                     android:layout_height="42dp"
+                    android:layout_marginLeft="12dp"
                     android:background="@drawable/circle_red"
                     android:gravity="center"
-                    android:text="1"
-                    android:layout_marginLeft="12dp"
+                    android:text="0"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="18sp"
-                    app:fontFamily="@font/pavanam"/>
+                    app:fontFamily="@font/pavanam" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

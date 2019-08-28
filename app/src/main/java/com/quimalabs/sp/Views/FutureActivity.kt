@@ -14,6 +14,9 @@ class FutureActivity : AppCompatActivity() {
         setContentView(R.layout.activity_future)
 
         this.btn_test_future.setOnClickListener {
+
+            btn_test_future.animate().rotation(btn_test_future.getRotation()-360).start()
+
             val intent = Intent(this, TestFutureActivity::class.java)
             startActivity(intent)
         }
