@@ -4,6 +4,8 @@ import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import com.jakewharton.rxbinding3.view.visibility
 import com.quimalabs.sp.R
 import kotlinx.android.synthetic.main.activity_score.*
 
@@ -27,5 +29,9 @@ class ScoreActivity : AppCompatActivity() {
         this.btn_future.setOnClickListener { val intent = Intent(this,FutureActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    fun infoScores(view: View) {
+        btn_info_score.visibility = View.GONE
     }
 }

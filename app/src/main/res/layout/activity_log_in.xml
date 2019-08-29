@@ -9,14 +9,15 @@
         tools:context=".Views.LogInActivity">
 
     <ImageView
+            android:id="@+id/img_logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:srcCompat="@drawable/logo"
-            android:id="@+id/img_logo"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp" tools:ignore="VectorDrawableCompat"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="VectorDrawableCompat" />
 
 
     <LinearLayout

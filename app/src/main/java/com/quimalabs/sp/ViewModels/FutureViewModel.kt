@@ -3,11 +3,11 @@ package com.quimalabs.sp.ViewModels
 import android.arch.lifecycle.ViewModel
 import io.reactivex.Observable
 
-class PresentViewModel: ViewModel() {
+class FutureViewModel: ViewModel() {
     fun retriveToBe() : Observable<List<String>>{
 
         val observable:Observable<List<String>> = Observable.create { observer ->
-            val list =  listOf("O", "O", "O","AS","ES","ES","A","E","E","AMOS","EMOS","IMOS","AN","EN","EN")
+            val list =  listOf("É", "É", "É","ÁS","ÁS","ÁS","Á","Á","Á","EMOS","EMOS","EMOS","ÁN","ÁN","ÁN")
 
             observer.onNext(list)
         }

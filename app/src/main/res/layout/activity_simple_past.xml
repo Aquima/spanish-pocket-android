@@ -12,20 +12,19 @@
             android:layout_width="340dp"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_weight="0.2"
             android:orientation="horizontal"
-            android:weightSum="2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
         <Button
-                android:id="@+id/btn_backSimplePast"
-                android:layout_width="25dp"
+                android:id="@+id/btn_back"
+                android:layout_width="20dp"
                 android:layout_height="30dp"
                 android:layout_marginTop="14dp"
-                android:layout_weight="1"
                 android:background="@drawable/ic_chevron_left"
                 android:onClick="backStores" />
 
@@ -35,7 +34,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginLeft="14dp"
-                android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/title_how_is_simple_past"
                 android:textAllCaps="false"
@@ -50,10 +48,10 @@
             android:id="@+id/linearLayout2"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.1"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
@@ -62,13 +60,11 @@
                 android:id="@+id/view"
                 android:layout_width="150dp"
                 android:layout_height="1dp"
-                android:layout_weight="1"
                 android:background="@color/colorDarkLead" />
 
         <LinearLayout
                 android:layout_width="33dp"
                 android:layout_height="33dp"
-                android:layout_weight="1"
                 android:background="@drawable/circle_green"
                 android:gravity="center"
                 android:orientation="horizontal">
@@ -84,7 +80,6 @@
                 android:id="@+id/view2"
                 android:layout_width="150dp"
                 android:layout_height="1dp"
-                android:layout_weight="1"
                 android:background="@color/colorDarkLead" />
     </LinearLayout>
 
@@ -92,9 +87,9 @@
             android:id="@+id/linearLayout4"
             android:layout_width="340dp"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.3"
             android:orientation="vertical"
-            android:weightSum="3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
@@ -109,7 +104,6 @@
                     android:id="@+id/imageView5"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:layout_weight="1"
                     android:background="@drawable/circle_green" />
 
             <TextView
@@ -117,7 +111,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
-                    android:layout_weight="1"
                     android:text="HABL"
                     android:textColor="@color/colorDarkGreen"
                     android:textSize="50sp"
@@ -128,7 +121,6 @@
                     android:id="@+id/txtFirstComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="AR"
                     android:textColor="@color/colorLead"
                     android:textSize="50sp"
@@ -147,7 +139,6 @@
                     android:id="@+id/imageView6"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:layout_weight="1"
                     android:background="@drawable/circle_green" />
 
             <TextView
@@ -155,7 +146,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
-                    android:layout_weight="1"
                     android:text="COM"
                     android:textColor="@color/colorDarkGreen"
                     android:textSize="50sp"
@@ -166,7 +156,6 @@
                     android:id="@+id/txtSecondComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="ER"
                     android:textColor="@color/colorLead"
                     android:textSize="50sp"
@@ -185,7 +174,6 @@
                     android:id="@+id/imageView7"
                     android:layout_width="12dp"
                     android:layout_height="12dp"
-                    android:layout_weight="1"
                     android:background="@drawable/circle_green" />
 
             <TextView
@@ -193,7 +181,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
-                    android:layout_weight="1"
                     android:text="VIV"
                     android:textColor="@color/colorDarkGreen"
                     android:textSize="50sp"
@@ -204,7 +191,6 @@
                     android:id="@+id/txtThirdComplete"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="IR"
                     android:textColor="@color/colorLead"
                     android:textSize="50sp"
@@ -219,7 +205,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:weightSum="3"
+            android:layout_weight="0.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
@@ -238,6 +224,7 @@
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="23sp"
                     android:textStyle="bold"
+                    android:onClick="pronounFirst"
                     app:fontFamily="@font/cormorant_garamond_semibold_italic" />
 
             <Button
@@ -246,6 +233,7 @@
                     android:layout_height="100dp"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
+                    android:onClick="pronounSecond"
                     android:text="@string/btn_pronouns2"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="23sp"
@@ -259,6 +247,7 @@
                     android:layout_gravity="fill"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
+                    android:onClick="pronounThird"
                     android:text="@string/btn_pronouns3"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"
@@ -277,6 +266,7 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/btn_pronouns"
+                    android:onClick="pronounQuarter"
                     android:text="@string/btn_pronouns4"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"
@@ -290,6 +280,7 @@
                     android:layout_gravity="fill"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
+                    android:onClick="pronounFifth"
                     android:text="@string/btn_pronouns5"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"

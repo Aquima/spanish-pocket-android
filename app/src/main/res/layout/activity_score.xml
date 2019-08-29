@@ -7,43 +7,52 @@
         android:background="@color/colorBackground"
         tools:context=".Views.ScoreActivity">
 
-    <TextView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
+    <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
-            android:src="@color/colorAccent"
-            android:text="VERBOS"
-            android:textColor="@color/colorGreen"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            app:fontFamily="@font/old_standard_tt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-            android:id="@+id/textView"
-            android:layout_width="322dp"
-            android:layout_height="47dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_corner_green_ligth"
+            android:layout_marginEnd="20dp"
             android:gravity="center"
-            android:text="@string/title_score"
-            android:textColor="@color/primaryWhiteColor"
-            android:textSize="17sp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@color/colorAccent"
+                android:text="VERBOS"
+                android:textColor="@color/colorGreen"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/old_standard_tt" />
+
+        <Button
+                android:id="@+id/btn_info_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/btn_corner_green_ligth"
+                android:text="@string/title_score"
+                android:textColor="@color/primaryWhiteColor"
+                android:textSize="17sp"
+                android:visibility="visible"
+                android:onClick="infoScores"/>
+
+    </LinearLayout>
 
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <LinearLayout
                 android:layout_width="wrap_content"
@@ -168,4 +177,5 @@
                     app:fontFamily="@font/pavanam" />
         </LinearLayout>
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
