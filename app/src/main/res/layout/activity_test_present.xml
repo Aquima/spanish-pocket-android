@@ -163,7 +163,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    app:fontFamily="@font/old_standard_tt"/>
+                    app:fontFamily="@font/old_standard_tt" />
 
             <Button
                     android:id="@+id/btn_w"
@@ -515,12 +515,19 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-            <Button
-                    android:id="@+id/btn_refresh"
+            <LinearLayout
                     android:layout_width="62dp"
                     android:layout_height="62dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/circle_green" />
+                    android:background="@drawable/circle_green"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_refresh"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_redo" />
+            </LinearLayout>
 
             <LinearLayout
                     android:layout_width="wrap_content"
@@ -596,8 +603,8 @@
 
             <Button
                     android:id="@+id/btn_bakSpace"
-                    android:layout_width="52dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/ic_backspace" />
