@@ -233,10 +233,10 @@
 
             <Button
                     android:id="@+id/btn_first"
+                    android:onClick="pronouns"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:background="@drawable/btn_pronouns"
-                    android:tag=""
                     android:text="@string/btn_pronouns1"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="23sp"

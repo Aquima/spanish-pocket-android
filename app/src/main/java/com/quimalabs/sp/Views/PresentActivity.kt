@@ -41,10 +41,11 @@ class PresentActivity : AppCompatActivity() {
         this.btn_third.tag = Pronouns.El
         this.btn_quarter.tag = Pronouns.Nosotros
         this.btn_fifth.tag = Pronouns.Ellos
+//        this.btn_first.setOnClickListener(pronouns(btn))
     }
 
     fun pronouns(view: View){
-        this.viewModel.retriveToBe(view.tag as Int).subscribe({toBe:List<String> ->
+        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
             // Toast.makeText(this, "Hola ${user.email}, has iniciado Sesión" , Toast.LENGTH_LONG).show()
 
 //            Handler(Looper.getMainLooper()).post {
