@@ -8,7 +8,7 @@ class PresentViewModel: ViewModel() {
     fun retriveToBe(pronouns: Int) : Observable<List<String>>{
 
         val observable:Observable<List<String>> = Observable.create { observer ->
-            val list =  listOf("hola", "hola", "hola")
+            val list =  listOf("O", "O", "O")
 
             observer.onNext(list)
         }

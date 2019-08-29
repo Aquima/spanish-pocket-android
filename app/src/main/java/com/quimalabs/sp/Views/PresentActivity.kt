@@ -29,8 +29,7 @@ class PresentActivity : AppCompatActivity() {
             startActivity(intent)
         }
         this.setupPronouns()
-
-
+//        this.pronouns()
     }
     fun backScores(view : View){
         this.onBackPressed()
