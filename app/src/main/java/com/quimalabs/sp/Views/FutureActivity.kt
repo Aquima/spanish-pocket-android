@@ -1,6 +1,5 @@
 package com.quimalabs.sp.Views
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -28,21 +27,24 @@ class FutureActivity : AppCompatActivity() {
         this.onBackPressed()
     }
 
-    fun futureComplete(view: View) {
-        this.txtFirstComplete.visibility
-    }
+//    fun futureComplete(view: View) {
+//        this.txtFirstComplete.visibility
+//    }
 
-    fun pronounFirst(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFirstFuture(view: View){
+        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
 
             //  if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[0]
-            this.txtFirstComplete.visibility
-            this.txtSecondComplete.text = toBe[1]
-            this.txtThirdComplete.text = toBe[2]
+            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstFuture.text = toBe[0]
+            this.txtSecondFuture.text = toBe[1]
+            this.txtThirdFuture.text = toBe[2]
+
+            this.txtFirstFuture.visibility = View.VISIBLE
+            this.txtSecondFuture.visibility = View.VISIBLE
+            this.txtThirdFuture.visibility = View.VISIBLE
             //prueba
 //            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -58,16 +60,16 @@ class FutureActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounSecond(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounSecondFuture(view: View){
+        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[3]
-            this.txtSecondComplete.text = toBe[4]
-            this.txtThirdComplete.text = toBe[5]
+            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstFuture.text = toBe[3]
+            this.txtSecondFuture.text = toBe[4]
+            this.txtThirdFuture.text = toBe[5]
             //prueba
 //            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -83,16 +85,16 @@ class FutureActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounThird(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounThirdFuture(view: View){
+        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[6]
-            this.txtSecondComplete.text = toBe[7]
-            this.txtThirdComplete.text = toBe[8]
+            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstFuture.text = toBe[6]
+            this.txtSecondFuture.text = toBe[7]
+            this.txtThirdFuture.text = toBe[8]
             //prueba
 //            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -108,16 +110,16 @@ class FutureActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounQuarter(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounQuarterFuture(view: View){
+        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[9]
-            this.txtSecondComplete.text = toBe[10]
-            this.txtThirdComplete.text = toBe[11]
+            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstFuture.text = toBe[9]
+            this.txtSecondFuture.text = toBe[10]
+            this.txtThirdFuture.text = toBe[11]
             //prueba
 //            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -133,16 +135,16 @@ class FutureActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounFifth(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFifthFuture(view: View){
+        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[12]
-            this.txtSecondComplete.text = toBe[13]
-            this.txtThirdComplete.text = toBe[14]
+            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstFuture.text = toBe[12]
+            this.txtSecondFuture.text = toBe[13]
+            this.txtThirdFuture.text = toBe[14]
             //prueba
 //            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {

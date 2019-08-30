@@ -29,16 +29,17 @@ class SimplePastActivity : AppCompatActivity() {
     }
 
 
-    fun pronounFirst(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFirstPastSimple(view: View){
+        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[0]
-            this.txtSecondComplete.text = toBe[1]
-            this.txtThirdComplete.text = toBe[2]
+            this.txtFirstPastSimple.text = toBe[0]
+            this.txtSecondPastSimple.text = toBe[1]
+            this.txtThirdPastSimple.text = toBe[2]
+            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+
             //prueba
 //            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -54,16 +55,16 @@ class SimplePastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounSecond(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounSecondPastSimple(view: View){
+        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[3]
-            this.txtSecondComplete.text = toBe[4]
-            this.txtThirdComplete.text = toBe[5]
+            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstPastSimple.text = toBe[3]
+            this.txtSecondPastSimple.text = toBe[4]
+            this.txtThirdPastSimple.text = toBe[5]
             //prueba
 //            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -79,16 +80,16 @@ class SimplePastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounThird(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounThirdPastSimple(view: View){
+        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[6]
-            this.txtSecondComplete.text = toBe[7]
-            this.txtThirdComplete.text = toBe[8]
+            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstPastSimple.text = toBe[6]
+            this.txtSecondPastSimple.text = toBe[7]
+            this.txtThirdPastSimple.text = toBe[8]
             //prueba
 //            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -104,16 +105,16 @@ class SimplePastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounQuarter(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounQuarterPastSimple(view: View){
+        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[9]
-            this.txtSecondComplete.text = toBe[10]
-            this.txtThirdComplete.text = toBe[11]
+            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstPastSimple.text = toBe[9]
+            this.txtSecondPastSimple.text = toBe[10]
+            this.txtThirdPastSimple.text = toBe[11]
             //prueba
 //            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -129,16 +130,16 @@ class SimplePastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounFifth(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFifthPastSimple(view: View){
+        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[12]
-            this.txtSecondComplete.text = toBe[13]
-            this.txtThirdComplete.text = toBe[14]
+            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstPastSimple.text = toBe[12]
+            this.txtSecondPastSimple.text = toBe[13]
+            this.txtThirdPastSimple.text = toBe[14]
             //prueba
 //            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {

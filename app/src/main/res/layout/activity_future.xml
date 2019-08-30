@@ -118,7 +118,7 @@
                     app:fontFamily="@font/old_standard_tt" />
 
             <TextView
-                    android:id="@+id/txtFirstComplete"
+                    android:id="@+id/txtFirstFuture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="É"
@@ -154,7 +154,7 @@
                     app:fontFamily="@font/old_standard_tt" />
 
             <TextView
-                    android:id="@+id/txtSecondComplete"
+                    android:id="@+id/txtSecondFuture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="É"
@@ -190,7 +190,7 @@
                     app:fontFamily="@font/old_standard_tt" />
 
             <TextView
-                    android:id="@+id/txtThirdComplete"
+                    android:id="@+id/txtThirdFuture"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="É"
@@ -219,11 +219,11 @@
                 android:orientation="horizontal">
 
             <Button
-                    android:id="@+id/btn_first"
+                    android:id="@+id/btn_first_future"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:background="@drawable/btn_pronouns"
-                    android:onClick="pronounFirst"
+                    android:onClick="pronounFirstFuture"
                     android:text="@string/btn_pronouns1"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="23sp"
@@ -231,12 +231,12 @@
                     app:fontFamily="@font/cormorant_garamond_semibold_italic" />
 
             <Button
-                    android:id="@+id/btn_second"
+                    android:id="@+id/btn_second_future"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
-                    android:onClick="pronounSecond"
+                    android:onClick="pronounSecondFuture"
                     android:text="@string/btn_pronouns2"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="23sp"
@@ -244,13 +244,13 @@
                     app:fontFamily="@font/cormorant_garamond_semibold_italic" />
 
             <Button
-                    android:id="@+id/btn_third"
+                    android:id="@+id/btn_third_future"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="fill"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
-                    android:onClick="pronounThird"
+                    android:onClick="pronounThirdFuture"
                     android:text="@string/btn_pronouns3"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"
@@ -265,11 +265,11 @@
                 android:orientation="horizontal">
 
             <Button
-                    android:id="@+id/btn_quarter"
+                    android:id="@+id/btn_quarter_future"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:background="@drawable/btn_pronouns"
-                    android:onClick="pronounQuarter"
+                    android:onClick="pronounQuarterFuture"
                     android:text="@string/btn_pronouns4"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"
@@ -277,13 +277,13 @@
                     app:fontFamily="@font/cormorant_garamond_semibold_italic" />
 
             <Button
-                    android:id="@+id/btn_fifth"
+                    android:id="@+id/btn_fifth_future"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_gravity="fill"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
-                    android:onClick="pronounFifth"
+                    android:onClick="pronounFifthFuture"
                     android:text="@string/btn_pronouns5"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="16sp"

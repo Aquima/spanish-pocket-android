@@ -29,16 +29,16 @@ class ImpPastActivity : AppCompatActivity() {
         this.onBackPressed()
     }
 
-    fun pronounFirst(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFirstImpPast(view: View){
+        this.viewModel.retriveImpPast().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[0]
-            this.txtSecondComplete.text = toBe[1]
-            this.txtThirdComplete.text = toBe[2]
+            this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstImpPast.text = toBe[0]
+            this.txtSecondImpPast.text = toBe[1]
+            this.txtThirdImpPast.text = toBe[2]
             //prueba
 //            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -54,16 +54,16 @@ class ImpPastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounSecond(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounSecondImpPast(view: View){
+        this.viewModel.retriveImpPast().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[3]
-            this.txtSecondComplete.text = toBe[4]
-            this.txtThirdComplete.text = toBe[5]
+            this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstImpPast.text = toBe[3]
+            this.txtSecondImpPast.text = toBe[4]
+            this.txtThirdImpPast.text = toBe[5]
             //prueba
 //            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -79,16 +79,16 @@ class ImpPastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounThird(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounThirdImpPast(view: View){
+        this.viewModel.retriveImpPast().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[6]
-            this.txtSecondComplete.text = toBe[7]
-            this.txtThirdComplete.text = toBe[8]
+            this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstImpPast.text = toBe[6]
+            this.txtSecondImpPast.text = toBe[7]
+            this.txtThirdImpPast.text = toBe[8]
             //prueba
 //            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -104,16 +104,16 @@ class ImpPastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounQuarter(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounQuarterImpPast(view: View){
+        this.viewModel.retriveImpPast().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[9]
-            this.txtSecondComplete.text = toBe[10]
-            this.txtThirdComplete.text = toBe[11]
+            this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstImpPast.text = toBe[9]
+            this.txtSecondImpPast.text = toBe[10]
+            this.txtThirdImpPast.text = toBe[11]
             //prueba
 //            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {
@@ -129,16 +129,16 @@ class ImpPastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun pronounFifth(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+    fun pronounFifthImpPast(view: View){
+        this.viewModel.retriveImpPast().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[12]
-            this.txtSecondComplete.text = toBe[13]
-            this.txtThirdComplete.text = toBe[14]
+            this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstImpPast.text = toBe[12]
+            this.txtSecondImpPast.text = toBe[13]
+            this.txtThirdImpPast.text = toBe[14]
             //prueba
 //            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
 //                if (event.action == MotionEvent.ACTION_UP) {

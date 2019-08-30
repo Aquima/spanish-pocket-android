@@ -51,11 +51,11 @@ class PresentActivity : AppCompatActivity() {
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
 
 //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtFirstComplete.text = toBe[0]
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtSecondComplete.text = toBe[1]
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[2]
             //prueba
 //            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
@@ -76,11 +76,11 @@ class PresentActivity : AppCompatActivity() {
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtFirstComplete.text = toBe[3]
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtSecondComplete.text = toBe[4]
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[5]
             //prueba
 //            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
@@ -101,11 +101,11 @@ class PresentActivity : AppCompatActivity() {
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtFirstComplete.text = toBe[6]
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtSecondComplete.text = toBe[7]
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[8]
             //prueba
 //            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
@@ -126,11 +126,11 @@ class PresentActivity : AppCompatActivity() {
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtFirstComplete.text = toBe[9]
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtSecondComplete.text = toBe[10]
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[11]
             //prueba
 //            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
@@ -151,11 +151,11 @@ class PresentActivity : AppCompatActivity() {
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
 
             //            if (this.btn_first.setOnTouchListener(true))
-            txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtFirstComplete.text = toBe[12]
-            txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtSecondComplete.text = toBe[13]
-            txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[14]
             //prueba
 //            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
