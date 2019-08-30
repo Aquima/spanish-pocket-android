@@ -73,6 +73,7 @@
                     android:id="@+id/btn_test_future"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
+                    android:onClick="onStarAnimation"
                     android:background="@drawable/ic_redo" />
         </LinearLayout>
 

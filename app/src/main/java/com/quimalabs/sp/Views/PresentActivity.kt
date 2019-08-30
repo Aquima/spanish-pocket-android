@@ -1,5 +1,6 @@
 package com.quimalabs.sp.Views
 
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.Enumerators.Pronouns
@@ -15,7 +17,6 @@ import com.quimalabs.sp.ViewModels.PresentViewModel
 import kotlinx.android.synthetic.main.activity_present.*
 
 class PresentActivity : AppCompatActivity() {
-
     lateinit var viewModel:PresentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,14 +25,14 @@ class PresentActivity : AppCompatActivity() {
 
         viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
 
-        this.btn_test_present.setOnClickListener {
-
-            btn_test_present.animate().rotation(btn_test_present.getRotation()-360).start()
-
-            val intent = Intent(this, TestPresentActivity::class.java)
-            startActivity(intent)
-        }
-        this.setupPronouns()
+//        this.btn_test_present.setOnClickListener {
+//
+////            btn_test_present.animate().rotation(btn_test_present.getRotation()-360).start()
+//
+//            val intent = Intent(this, TestPresentActivity::class.java)
+//            startActivity(intent)
+//        }
+//        this.setupPronouns()
 //        this.pronouns()
     }
     fun backScores(view : View){
@@ -173,9 +174,20 @@ class PresentActivity : AppCompatActivity() {
         })
     }
 
-//    fun goTestPresent(view: View) {
-//        this.button.setOnClickListener {
-//            val intent
-//        }
-//    }
+    fun onStarAnimationPresent(view: View){
+        val valueAnimator = ValueAnimator.ofFloat(0f, 360f)
+
+        valueAnimator.addUpdateListener {
+            val value = it.animatedValue as Float
+            // 2
+            this.btn_test_present.rotation = value
+        }
+
+        valueAnimator.interpolator = LinearInterpolator()
+        valueAnimator.duration = 600
+        valueAnimator.start()
+
+        val intent = Intent(this, TestPresentActivity::class.java)
+        startActivity(intent)
+    }
 }

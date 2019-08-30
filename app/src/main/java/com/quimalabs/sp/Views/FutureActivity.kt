@@ -1,9 +1,12 @@
 package com.quimalabs.sp.Views
 
+import android.animation.ValueAnimator
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.LinearInterpolator
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.FutureViewModel
 import kotlinx.android.synthetic.main.activity_future.*
@@ -14,14 +17,15 @@ class FutureActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_future)
+        viewModel = ViewModelProviders.of(this).get(FutureViewModel::class.java)
 
-        this.btn_test_future.setOnClickListener {
-
-            btn_test_future.animate().rotation(btn_test_future.getRotation()-360).start()
-
-            val intent = Intent(this, TestFutureActivity::class.java)
-            startActivity(intent)
-        }
+//        this.btn_test_future.setOnClickListener {
+//
+//            btn_test_future.animate().rotation(btn_test_future.getRotation()-360).start()
+//
+//            val intent = Intent(this, TestFutureActivity::class.java)
+//            startActivity(intent)
+//        }
     }
     fun backStores(view: View) {
         this.onBackPressed()
@@ -159,5 +163,22 @@ class FutureActivity : AppCompatActivity() {
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
+    }
+
+    fun onStarAnimation(view: View){
+        val valueAnimator = ValueAnimator.ofFloat(0f, 360f)
+
+        valueAnimator.addUpdateListener {
+            val value = it.animatedValue as Float
+            // 2
+            this.btn_test_future.rotation = value
+        }
+
+        valueAnimator.interpolator = LinearInterpolator()
+        valueAnimator.duration = 600
+        valueAnimator.start()
+
+        val intent = Intent(this, TestFutureActivity::class.java)
+        startActivity(intent)
     }
 }

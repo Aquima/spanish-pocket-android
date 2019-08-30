@@ -16,7 +16,7 @@
             android:layout_marginEnd="13dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:weightSum="1"
+            android:layout_weight="0.2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -59,7 +59,7 @@
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:weightSum="2"
+            android:layout_weight="0.3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
@@ -110,7 +110,7 @@
             android:background="@color/colorBackgroundKeyboard"
             android:gravity="center"
             android:orientation="vertical"
-            android:weightSum="3"
+            android:layout_weight="0.5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -134,6 +134,7 @@
                     android:textColorHint="@color/colorHintKeyboard"
                     android:textSize="25sp"
                     android:textStyle="bold"
+                    android:maxLength="15"
                     app:fontFamily="@font/old_standard_tt" />
 
             <TextView
@@ -421,7 +422,7 @@
             <Button
                     android:id="@+id/btn_z"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="z"
@@ -433,7 +434,7 @@
             <Button
                     android:id="@+id/btn_x"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="x"
@@ -445,7 +446,7 @@
             <Button
                     android:id="@+id/btn_c"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="c"
@@ -457,7 +458,7 @@
             <Button
                     android:id="@+id/btn_v"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="v"
@@ -469,7 +470,7 @@
             <Button
                     android:id="@+id/bn_b"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="b"
@@ -481,7 +482,7 @@
             <Button
                     android:id="@+id/btn_n"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="n"
@@ -493,7 +494,7 @@
             <Button
                     android:id="@+id/btn_m"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="m"
@@ -527,6 +528,7 @@
                         android:id="@+id/btn_refresh"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:onClick="starAnimationFuture"
                         android:background="@drawable/ic_redo" />
             </LinearLayout>
 
@@ -552,7 +554,7 @@
                 <Button
                         android:id="@+id/btn_E"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
@@ -565,7 +567,7 @@
                 <Button
                         android:id="@+id/btn_I"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
@@ -578,7 +580,7 @@
                 <Button
                         android:id="@+id/btn_O"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
@@ -591,7 +593,7 @@
                 <Button
                         android:id="@+id/btn_U"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"

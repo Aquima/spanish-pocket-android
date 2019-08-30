@@ -16,7 +16,7 @@
             android:layout_marginEnd="13dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_weight="1"
+            android:layout_weight="0.2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -58,7 +58,7 @@
             android:layout_marginTop="50dp"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_weight="2"
+            android:layout_weight="0.3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
@@ -109,7 +109,7 @@
             android:background="@color/colorBackgroundKeyboard"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_weight="3"
+            android:layout_weight="0.5"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -124,7 +124,7 @@
                 android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/editText"
+                    android:id="@+id/txt_test_present"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="¡Escribe!"
@@ -133,7 +133,9 @@
                     android:textColorHint="@color/colorHintKeyboard"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    app:fontFamily="@font/old_standard_tt" />
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    app:fontFamily="@font/old_standard_tt"/>
 
             <TextView
                     android:layout_width="match_parent"
@@ -163,6 +165,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -172,6 +175,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="w"
+                    android:onClick="keyboard"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
@@ -182,6 +186,7 @@
                     android:layout_width="37dp"
                     android:layout_height="57dp"
                     android:layout_weight="1"
+                    android:onClick="keyboard"
                     android:background="@drawable/btn_keyboard"
                     android:text="e"
                     android:textAllCaps="false"
@@ -199,6 +204,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -211,6 +217,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -223,6 +230,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -235,6 +243,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -247,6 +256,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -259,6 +269,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -271,6 +282,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
         </LinearLayout>
 
@@ -292,6 +304,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -304,6 +317,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -316,6 +330,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -328,6 +343,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -340,6 +356,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -352,6 +369,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -364,6 +382,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -376,6 +395,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -388,6 +408,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -400,6 +421,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
         </LinearLayout>
 
@@ -420,85 +442,92 @@
             <Button
                     android:id="@+id/btn_z"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="z"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
                     android:id="@+id/btn_x"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="x"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
                     android:id="@+id/btn_c"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="c"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
                     android:id="@+id/btn_v"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="v"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
-                    android:id="@+id/bn_b"
+                    android:id="@+id/btn_b"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="b"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
                     android:id="@+id/btn_n"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="n"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
                     android:id="@+id/btn_m"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
                     android:text="m"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboard"
                     app:fontFamily="@font/old_standard_tt"/>
 
             <Button
@@ -526,6 +555,7 @@
                         android:id="@+id/btn_refresh"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
+                        android:onClick="starAnimationPresent"
                         android:background="@drawable/ic_redo" />
             </LinearLayout>
 
@@ -540,64 +570,64 @@
                         android:layout_width="37dp"
                         android:layout_height="57dp"
                         android:layout_marginLeft="20dp"
-                        android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
                         android:text="á"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboard"
                         app:fontFamily="@font/old_standard_tt"/>
 
                 <Button
                         android:id="@+id/btn_E"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
                         android:text="é"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboard"
                         app:fontFamily="@font/old_standard_tt"/>
 
                 <Button
                         android:id="@+id/btn_I"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
                         android:text="í"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboard"
                         app:fontFamily="@font/old_standard_tt"/>
 
                 <Button
                         android:id="@+id/btn_O"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
                         android:text="ó"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboard"
                         app:fontFamily="@font/old_standard_tt"/>
 
                 <Button
                         android:id="@+id/btn_U"
                         android:layout_width="37dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="57dp"
                         android:layout_marginLeft="5dp"
-                        android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
                         android:text="ú"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboard"
                         app:fontFamily="@font/old_standard_tt"/>
             </LinearLayout>
 
@@ -606,7 +636,7 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_weight="1"
+                    android:onClick="deleteLetter"
                     android:background="@drawable/ic_backspace" />
         </LinearLayout>
     </LinearLayout>

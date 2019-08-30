@@ -1,10 +1,13 @@
 package com.quimalabs.sp.Views
 
+import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.animation.LinearInterpolator
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.ImpPastViewModel
 import kotlinx.android.synthetic.main.activity_imp_past.*
@@ -15,14 +18,15 @@ class ImpPastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imp_past)
+        viewModel = ViewModelProviders.of(this).get(ImpPastViewModel::class.java)
 
-        this.btn_test_imp_past.setOnClickListener {
-
-            btn_test_imp_past.animate().rotation(btn_test_imp_past.getRotation()-360).start()
-
-            val intent = Intent(this, TestImpPastActivity::class.java)
-            startActivity(intent)
-        }
+//        this.btn_test_imp_past.setOnClickListener {
+//
+//            btn_test_imp_past.animate().rotation(btn_test_imp_past.getRotation()-360).start()
+//
+//            val intent = Intent(this, TestImpPastActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 
     fun backScores(view: View) {
@@ -153,5 +157,18 @@ class ImpPastActivity : AppCompatActivity() {
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
+    }
+    fun onStarAnimationImpPast(view: View){
+        val valueAnimator = ValueAnimator.ofFloat( 0f,360f)
+        valueAnimator.addUpdateListener{
+            val value=it.animatedValue as Float
+            this.btn_test_imp_past.rotation = value
+        }
+        valueAnimator.interpolator = LinearInterpolator()
+        valueAnimator.duration = 600
+        valueAnimator.start()
+
+        val intent = Intent(this, TestImpPastActivity::class.java)
+        startActivity(intent)
     }
 }
