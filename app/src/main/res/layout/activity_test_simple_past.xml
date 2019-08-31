@@ -128,7 +128,7 @@
                 android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/editText"
+                    android:id="@+id/txt_test_simple_past"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="¡Escribe!"
@@ -168,6 +168,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -180,6 +181,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -192,6 +194,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -204,6 +207,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -216,6 +220,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -228,6 +233,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -240,6 +246,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -252,6 +259,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -264,6 +272,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -276,6 +285,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
 
@@ -297,6 +307,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -309,6 +320,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -321,6 +333,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -333,6 +346,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -345,6 +359,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -357,6 +372,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -369,6 +385,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -381,6 +398,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -393,6 +411,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -405,6 +424,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
 
@@ -432,6 +452,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -444,6 +465,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -456,6 +478,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -468,6 +491,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -480,6 +504,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -492,6 +517,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -504,6 +530,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
+                    android:onClick="keyboardSimplePast"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -552,6 +579,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboardSimplePast"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -565,6 +593,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboardSimplePast"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -578,6 +607,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboardSimplePast"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -591,6 +621,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboardSimplePast"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -604,6 +635,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
+                        android:onClick="keyboardSimplePast"
                         app:fontFamily="@font/old_standard_tt" />
             </LinearLayout>
 
@@ -613,6 +645,7 @@
                     android:layout_height="60dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
+                    android:onClick="deleteKeyboardSimplePast"
                     android:background="@drawable/ic_backspace" />
         </LinearLayout>
     </LinearLayout>

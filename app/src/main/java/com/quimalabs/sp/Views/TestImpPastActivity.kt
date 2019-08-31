@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+import android.widget.Button
 import com.quimalabs.sp.R
 import kotlinx.android.synthetic.main.activity_test_imp_past.*
 
@@ -28,5 +29,16 @@ class TestImpPastActivity : AppCompatActivity() {
         animation.interpolator = LinearInterpolator()
         animation.duration = 600
         animation.start()
+    }
+    fun keyboardImpPast(view: View){
+        val currentText:String = this.txt_test_Imp_Past.text.toString()
+        val btn:Button = view as Button
+        this.txt_test_Imp_Past.text = currentText + btn.text.toString()
+    }
+    fun deleteImpPast(view: View){
+        val txt:String = this.txt_test_Imp_Past.text.toString()
+        if (!txt.isEmpty()){
+            this.txt_test_Imp_Past.text = txt.substring(0,txt.length-1)
+        }
     }
 }
