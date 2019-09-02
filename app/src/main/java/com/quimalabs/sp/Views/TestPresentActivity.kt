@@ -1,6 +1,7 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -8,10 +9,13 @@ import android.view.View
 import android.view.animation.LinearInterpolator
 import android.widget.Button
 import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.TestPresentViewModel
 import kotlinx.android.synthetic.main.activity_test_present.*
 import kotlinx.android.synthetic.main.activity_test_present.view.*
+import kotlin.random.Random
 
 class TestPresentActivity : AppCompatActivity() {
+    lateinit var viewModel:TestPresentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +39,33 @@ class TestPresentActivity : AppCompatActivity() {
         //insert
 
         this.txt_test_present.text = ""
+        refreshTextPresent()
     }
-
+    //
+    fun random(n: Int) = (Math.random() * n).toInt()
+    fun refreshTextPresent(){
+        viewModel = ViewModelProviders.of(this).get(TestPresentViewModel::class.java)
+        this.viewModel.returnTestPresent().subscribe({test:List<String> ->
+            val n = test.count()
+            val r = random(n)
+            this.txt_testPresent.text = test[r]
+            val mutableList = test.toMutableList().removeAt(r)
+        },{error ->
+            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
+        })
+    }
+    //ejemplo diferentes formas
+//    fun random(n: Int) = (Math.random() * n).toInt()
+//    fun random(from: Int, to: Int) = (Math.random() * (to - from) + from).toInt()
+//    fun random(pair: Pair<Int, Int>) = random(pair.first, pair.second)
+//    fun main(args: Array<String>) {
+//        val n = 10
+//        val rand1 = random(n)
+//        val rand2 = random(5, n)
+//        val rand3 = random(5 to n)
+//        println(List(10) { random(n) })
+//        println(List(10) { random(5 to n) })
+//    }
     fun keyboard(view: View){
         val currentText:String =  this.txt_test_present.text.toString()
         val btn:Button = view as Button

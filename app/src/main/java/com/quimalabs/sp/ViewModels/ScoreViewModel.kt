@@ -12,6 +12,5 @@ class ScoreViewModel: ViewModel() {
             observer.onNext(list)
         }
         return observable
-
     }
 }
