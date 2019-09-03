@@ -17,23 +17,41 @@ class FutureActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_future)
+        disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(FutureViewModel::class.java)
 
-//        this.btn_test_future.setOnClickListener {
-//
-//            btn_test_future.animate().rotation(btn_test_future.getRotation()-360).start()
-//
-//            val intent = Intent(this, TestFutureActivity::class.java)
-//            startActivity(intent)
-//        }
     }
+    fun hereFuture(view: View) {
+        this.btnFuture.visibility = View.GONE
+        this.btn_go_test_Future.visibility = View.GONE
+        this.viewFuture.visibility = View.GONE
+        this.txt_1.visibility = View.GONE
+        this.txt_2.visibility = View.GONE
+        this.linearLayoutFuture.visibility = View.GONE
+        clickButtons(view)
+    }
+    fun disableClickButtons(view: View){
+        this.btn_back.isClickable = false
+        this.btn_test_future.isClickable = false
+        this.btn_first_future.isClickable = false
+        this.btn_second_future.isClickable = false
+        this.btn_third_future.isClickable = false
+        this.btn_quarter_future.isClickable = false
+        this.btn_fifth_future.isClickable = false
+    }
+    fun clickButtons(view: View){
+        this.btn_back.isClickable = true
+        this.btn_test_future.isClickable = true
+        this.btn_first_future.isClickable = true
+        this.btn_second_future.isClickable = true
+        this.btn_third_future.isClickable = true
+        this.btn_quarter_future.isClickable = true
+        this.btn_fifth_future.isClickable = true
+    }
+
     fun backStores(view: View) {
         this.onBackPressed()
     }
-
-//    fun futureComplete(view: View) {
-//        this.txtFirstComplete.visibility
-//    }
 
     fun pronounFirstFuture(view: View){
         this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
@@ -49,17 +67,6 @@ class FutureActivity : AppCompatActivity() {
             this.txtFirstFuture.visibility = View.VISIBLE
             this.txtSecondFuture.visibility = View.VISIBLE
             this.txtThirdFuture.visibility = View.VISIBLE
-            //prueba
-//            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[0]
-//                    this.txtSecondComplete.text = toBe[1]
-//                    this.txtThirdComplete.text = toBe[2]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -74,17 +81,6 @@ class FutureActivity : AppCompatActivity() {
             this.txtFirstFuture.text = toBe[3]
             this.txtSecondFuture.text = toBe[4]
             this.txtThirdFuture.text = toBe[5]
-            //prueba
-//            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[3]
-//                    this.txtSecondComplete.text = toBe[4]
-//                    this.txtThirdComplete.text = toBe[5]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -99,17 +95,6 @@ class FutureActivity : AppCompatActivity() {
             this.txtFirstFuture.text = toBe[6]
             this.txtSecondFuture.text = toBe[7]
             this.txtThirdFuture.text = toBe[8]
-            //prueba
-//            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[6]
-//                    this.txtSecondComplete.text = toBe[7]
-//                    this.txtThirdComplete.text = toBe[8]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -124,16 +109,6 @@ class FutureActivity : AppCompatActivity() {
             this.txtFirstFuture.text = toBe[9]
             this.txtSecondFuture.text = toBe[10]
             this.txtThirdFuture.text = toBe[11]
-            //prueba
-//            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[9]
-//                    this.txtSecondComplete.text = toBe[10]
-//                    this.txtThirdComplete.text = toBe[11]
-//                    true
-//                } else
-//                    false
-//            })
 
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
@@ -149,23 +124,12 @@ class FutureActivity : AppCompatActivity() {
             this.txtFirstFuture.text = toBe[12]
             this.txtSecondFuture.text = toBe[13]
             this.txtThirdFuture.text = toBe[14]
-            //prueba
-//            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[12]
-//                    this.txtSecondComplete.text = toBe[13]
-//                    this.txtThirdComplete.text = toBe[14]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
 
-    fun onStarAnimation(view: View){
+    fun onStarAnimationFuture(view: View){
         val valueAnimator = ValueAnimator.ofFloat(0f, 360f)
 
         valueAnimator.addUpdateListener {
@@ -181,4 +145,5 @@ class FutureActivity : AppCompatActivity() {
         val intent = Intent(this, TestFutureActivity::class.java)
         startActivity(intent)
     }
+
 }

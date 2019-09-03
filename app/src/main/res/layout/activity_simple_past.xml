@@ -9,10 +9,10 @@
 
     <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="340dp"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="0.2"
             android:orientation="horizontal"
@@ -28,25 +28,62 @@
                 android:background="@drawable/ic_chevron_left"
                 android:onClick="backStores" />
 
-        <TextView
-                android:id="@+id/textView2"
+        <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="14dp"
                 android:gravity="right"
-                android:text="@string/title_how_is_simple_past"
-                android:textAllCaps="false"
-                android:textColor="@color/colorDarkGreen"
-                android:textIsSelectable="false"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:fontFamily="@font/old_standard_tt" />
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/title_how_is_simple_past1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorDarkGreen"
+                    android:textIsSelectable="false"
+                    android:textSize="37sp"
+                    android:textStyle="bold"
+                    app:fontFamily="@font/old_standard_tt" />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_how_is_simple_past2"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="37sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/old_standard_tt" />
+
+                <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="?"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorDarkGreen"
+                        android:textIsSelectable="false"
+                        android:textSize="37sp"
+                        android:textStyle="bold"
+                        app:fontFamily="@font/old_standard_tt" />
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="wrap_content"
+            android:layout_width="343dp"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:layout_weight="0.1"
@@ -60,6 +97,7 @@
                 android:id="@+id/view"
                 android:layout_width="150dp"
                 android:layout_height="1dp"
+                android:layout_marginRight="5dp"
                 android:background="@color/colorDarkLead" />
 
         <LinearLayout
@@ -73,14 +111,15 @@
                     android:id="@+id/btn_test_simple_past"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:onClick = "onStarAnimation"
-                    android:background="@drawable/ic_redo" />
+                    android:background="@drawable/ic_redo"
+                    android:onClick="onStarAnimation" />
         </LinearLayout>
 
         <View
                 android:id="@+id/view2"
                 android:layout_width="150dp"
                 android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
                 android:background="@color/colorDarkLead" />
     </LinearLayout>
 
@@ -88,7 +127,9 @@
             android:id="@+id/linearLayout4"
             android:layout_width="340dp"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
             android:layout_weight="0.3"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +155,7 @@
                     android:layout_marginLeft="6dp"
                     android:text="HABL"
                     android:textColor="@color/colorDarkGreen"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
 
@@ -124,7 +165,7 @@
                     android:layout_height="match_parent"
                     android:text="AR"
                     android:textColor="@color/colorLead"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
@@ -132,7 +173,6 @@
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -149,7 +189,7 @@
                     android:layout_marginLeft="6dp"
                     android:text="COM"
                     android:textColor="@color/colorDarkGreen"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
 
@@ -159,7 +199,7 @@
                     android:layout_height="wrap_content"
                     android:text="ER"
                     android:textColor="@color/colorLead"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
@@ -167,7 +207,6 @@
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -184,7 +223,7 @@
                     android:layout_marginLeft="6dp"
                     android:text="VIV"
                     android:textColor="@color/colorDarkGreen"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
 
@@ -194,19 +233,20 @@
                     android:layout_height="wrap_content"
                     android:text="IR"
                     android:textColor="@color/colorLead"
-                    android:textSize="50sp"
+                    android:textSize="43sp"
                     android:textStyle="bold"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-            android:layout_width="340dp"
+            android:id="@+id/linearLayout8"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.4"
             android:gravity="center"
             android:orientation="vertical"
-            android:layout_weight="0.4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
@@ -259,13 +299,13 @@
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="21dp"
+                android:layout_marginTop="15dp"
                 android:orientation="horizontal">
 
             <Button
                     android:id="@+id/btn_quarter_past_simple"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:background="@drawable/btn_pronouns"
                     android:onClick="pronounQuarterPastSimple"
                     android:text="@string/btn_pronouns4"
@@ -276,8 +316,8 @@
 
             <Button
                     android:id="@+id/btn_fifth_past_simple"
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
                     android:layout_gravity="fill"
                     android:layout_marginLeft="13dp"
                     android:background="@drawable/btn_pronouns"
@@ -289,4 +329,77 @@
                     app:fontFamily="@font/cormorant_garamond_semibold_italic" />
         </LinearLayout>
     </LinearLayout>
+
+    <View
+            android:id="@+id/viewSimplePast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:background="@color/colorKeyboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/nothing_you_could_do"
+            android:lines="2"
+            android:text="@string/pronouns_present"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnSimplePast"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+            android:id="@+id/btnSimplePast"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_pronouns"
+            android:fontFamily="@font/cormorant_garamond_semibold_italic"
+            android:onClick="hereSimplePast"
+            android:text="YO"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout8"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    <LinearLayout
+            android:id="@+id/linearLayoutSimplePast"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <Button
+                android:id="@+id/btn_go_test_simple_past"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_redo"
+                android:onClick="onStarAnimation" />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/txt_2"
+            android:layout_width="187dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nothing_you_could_do"
+            android:text="@string/info_later"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSimplePast" />
 </android.support.constraint.ConstraintLayout>

@@ -1,16 +1,12 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.annotation.SuppressLint
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MotionEvent
 import android.view.View
 import android.view.animation.LinearInterpolator
-import android.widget.TextView
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.Enumerators.Pronouns
 import com.quimalabs.sp.ViewModels.PresentViewModel
@@ -22,18 +18,40 @@ class PresentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_present)
-
+        disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
 
-//        this.btn_test_present.setOnClickListener {
-//
-////            btn_test_present.animate().rotation(btn_test_present.getRotation()-360).start()
-//
-//            val intent = Intent(this, TestPresentActivity::class.java)
-//            startActivity(intent)
-//        }
-//        this.setupPronouns()
-//        this.pronouns()
+        this.btn_go_test_present.setOnClickListener { val intent = Intent(this,TestPresentActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    fun herePresent(view: View){
+        this.btnPresent.visibility = View.GONE
+        this.btn_go_test_present.visibility = View.GONE
+        this.viewPresent.visibility = View.GONE
+        this.txt_1.visibility = View.GONE
+        this.txt_2.visibility = View.GONE
+        this.linearLayout6.visibility = View.GONE
+        clickButtons(view)
+    }
+    fun disableClickButtons(view: View){
+        this.btn_back.isClickable = false
+        this.btn_test_present.isClickable = false
+        this.btn_first.isClickable = false
+        this.btn_second.isClickable = false
+        this.btn_third.isClickable = false
+        this.btn_quarter.isClickable = false
+        this.btn_fifth.isClickable = false
+    }
+    fun clickButtons(view: View){
+        this.btn_back.isClickable = true
+        this.btn_test_present.isClickable = true
+        this.btn_first.isClickable = true
+        this.btn_second.isClickable = true
+        this.btn_third.isClickable = true
+        this.btn_quarter.isClickable = true
+        this.btn_fifth.isClickable = true
     }
     fun backScores(view : View){
         this.onBackPressed()
@@ -45,7 +63,6 @@ class PresentActivity : AppCompatActivity() {
         this.btn_third.tag = Pronouns.El
         this.btn_quarter.tag = Pronouns.Nosotros
         this.btn_fifth.tag = Pronouns.Ellos
-//        this.btn_first.setOnClickListener(pronouns(btn))
     }
 
     fun pronounFirst(view: View){
@@ -58,17 +75,6 @@ class PresentActivity : AppCompatActivity() {
             this.txtSecondComplete.text = toBe[1]
             this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[2]
-            //prueba
-//            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[0]
-//                    this.txtSecondComplete.text = toBe[1]
-//                    this.txtThirdComplete.text = toBe[2]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
 //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -83,17 +89,6 @@ class PresentActivity : AppCompatActivity() {
             this.txtSecondComplete.text = toBe[4]
             this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[5]
-            //prueba
-//            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[3]
-//                    this.txtSecondComplete.text = toBe[4]
-//                    this.txtThirdComplete.text = toBe[5]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -108,17 +103,6 @@ class PresentActivity : AppCompatActivity() {
             this.txtSecondComplete.text = toBe[7]
             this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[8]
-            //prueba
-//            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[6]
-//                    this.txtSecondComplete.text = toBe[7]
-//                    this.txtThirdComplete.text = toBe[8]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -133,17 +117,6 @@ class PresentActivity : AppCompatActivity() {
             this.txtSecondComplete.text = toBe[10]
             this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[11]
-            //prueba
-//            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[9]
-//                    this.txtSecondComplete.text = toBe[10]
-//                    this.txtThirdComplete.text = toBe[11]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -158,17 +131,6 @@ class PresentActivity : AppCompatActivity() {
             this.txtSecondComplete.text = toBe[13]
             this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
             this.txtThirdComplete.text = toBe[14]
-            //prueba
-//            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[12]
-//                    this.txtSecondComplete.text = toBe[13]
-//                    this.txtThirdComplete.text = toBe[14]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })

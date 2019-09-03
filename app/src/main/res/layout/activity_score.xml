@@ -37,11 +37,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/btn_corner_green_ligth"
+                android:onClick="infoScores"
                 android:text="@string/title_score"
                 android:textColor="@color/primaryWhiteColor"
-                android:textSize="17sp"
-                android:visibility="visible"
-                android:onClick="infoScores"/>
+                android:textSize="16sp"
+                android:visibility="visible" />
 
     </LinearLayout>
 

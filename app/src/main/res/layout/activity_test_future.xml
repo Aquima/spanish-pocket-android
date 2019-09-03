@@ -121,7 +121,6 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="80dp"
-                android:layout_marginBottom="4dp"
                 android:orientation="vertical">
 
             <TextView
@@ -129,22 +128,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="¡Escribe!"
+                    android:maxLength="15"
                     android:textAlignment="center"
                     android:textColor="@color/primaryWhiteColor"
                     android:textColorHint="@color/colorHintKeyboard"
                     android:textSize="25sp"
                     android:textStyle="bold"
-                    android:maxLength="15"
                     app:fontFamily="@font/old_standard_tt" />
 
             <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="11dp"
+                    android:maxLines="1"
                     android:text="************************************"
                     android:textAlignment="center"
                     android:textColor="@color/colorGreen"
-                    android:textSize="14sp"
-                    android:maxLines="1"/>
+                    android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -290,7 +289,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="1dp"
                 android:layout_marginRight="6dp"
                 android:orientation="horizontal">
 
@@ -300,11 +298,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="a"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -313,11 +311,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="s"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -326,11 +324,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="d"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -339,11 +337,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="f"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -352,11 +350,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="g"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -365,11 +363,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="h"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -378,11 +376,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="j"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -391,11 +389,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="k"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -404,11 +402,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="l"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -417,11 +415,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="ñ"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
         </LinearLayout>
 
@@ -429,7 +427,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="57dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="1dp"
                 android:layout_marginRight="6dp"
                 android:orientation="horizontal">
 
@@ -445,11 +442,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="z"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -458,11 +455,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="x"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -471,11 +468,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="c"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -484,11 +481,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="v"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -497,11 +494,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="b"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -510,11 +507,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="n"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -523,11 +520,11 @@
                     android:layout_height="57dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_keyboard"
+                    android:onClick="keyboardFuture"
                     android:text="m"
                     android:textAllCaps="false"
                     android:textColor="@color/primaryWhiteColor"
                     android:textSize="20sp"
-                    android:onClick="keyboardFuture"
                     app:fontFamily="@font/old_standard_tt" />
 
             <Button
@@ -540,13 +537,13 @@
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
             <LinearLayout
-                    android:layout_width="62dp"
-                    android:layout_height="62dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/circle_green"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -555,8 +552,8 @@
                         android:id="@+id/btn_refresh"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:onClick="starAnimationFuture"
-                        android:background="@drawable/ic_redo" />
+                        android:background="@drawable/ic_redo"
+                        android:onClick="starAnimationFuture" />
             </LinearLayout>
 
             <LinearLayout
@@ -572,11 +569,11 @@
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
+                        android:onClick="keyboardFuture"
                         android:text="á"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        android:onClick="keyboardFuture"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -586,11 +583,11 @@
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
+                        android:onClick="keyboardFuture"
                         android:text="é"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        android:onClick="keyboardFuture"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -600,11 +597,11 @@
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
+                        android:onClick="keyboardFuture"
                         android:text="í"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        android:onClick="keyboardFuture"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -614,11 +611,11 @@
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
+                        android:onClick="keyboardFuture"
                         android:text="ó"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        android:onClick="keyboardFuture"
                         app:fontFamily="@font/old_standard_tt" />
 
                 <Button
@@ -628,22 +625,22 @@
                         android:layout_marginLeft="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/btn_keyboard"
+                        android:onClick="keyboardFuture"
                         android:text="ú"
                         android:textAllCaps="false"
                         android:textColor="@color/primaryWhiteColor"
                         android:textSize="30sp"
-                        android:onClick="keyboardFuture"
                         app:fontFamily="@font/old_standard_tt" />
             </LinearLayout>
 
             <Button
                     android:id="@+id/btn_bakSpace"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
-                    android:onClick="deleteFuture"
-                    android:background="@drawable/ic_backspace" />
+                    android:background="@drawable/ic_backspace"
+                    android:onClick="deleteFuture" />
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

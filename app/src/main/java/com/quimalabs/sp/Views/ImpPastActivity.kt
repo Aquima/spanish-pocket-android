@@ -1,7 +1,6 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.annotation.SuppressLint
 import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -18,15 +17,37 @@ class ImpPastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imp_past)
+        disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(ImpPastViewModel::class.java)
 
-//        this.btn_test_imp_past.setOnClickListener {
-//
-//            btn_test_imp_past.animate().rotation(btn_test_imp_past.getRotation()-360).start()
-//
-//            val intent = Intent(this, TestImpPastActivity::class.java)
-//            startActivity(intent)
-//        }
+    }
+
+    fun hereImpPast(view: View) {
+        this.btnImpPast.visibility = View.GONE
+        this.btn_go_test_Imp_Past.visibility = View.GONE
+        this.viewImpPast.visibility = View.GONE
+        this.txt_1.visibility = View.GONE
+        this.txt_2.visibility = View.GONE
+        this.linearLayoutImpPast.visibility = View.GONE
+        clickButtons(view)
+    }
+    fun disableClickButtons(view: View){
+        this.btn_back.isClickable = false
+        this.btn_test_imp_past.isClickable = false
+        this.btn_first_imp_past.isClickable = false
+        this.btn_second_imp_past.isClickable = false
+        this.btn_third_imp_past.isClickable = false
+        this.btn_quarter_imp_past.isClickable = false
+        this.btn_fifth_imp_past.isClickable = false
+    }
+    fun clickButtons(view: View){
+        this.btn_back.isClickable = true
+        this.btn_test_imp_past.isClickable = true
+        this.btn_first_imp_past.isClickable = true
+        this.btn_second_imp_past.isClickable = true
+        this.btn_third_imp_past.isClickable = true
+        this.btn_quarter_imp_past.isClickable = true
+        this.btn_fifth_imp_past.isClickable = true
     }
 
     fun backScores(view: View) {
@@ -43,16 +64,6 @@ class ImpPastActivity : AppCompatActivity() {
             this.txtFirstImpPast.text = toBe[0]
             this.txtSecondImpPast.text = toBe[1]
             this.txtThirdImpPast.text = toBe[2]
-            //prueba
-//            btn_first.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[0]
-//                    this.txtSecondComplete.text = toBe[1]
-//                    this.txtThirdComplete.text = toBe[2]
-//                    true
-//                } else
-//                    false
-//            })
 
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
@@ -68,16 +79,6 @@ class ImpPastActivity : AppCompatActivity() {
             this.txtFirstImpPast.text = toBe[3]
             this.txtSecondImpPast.text = toBe[4]
             this.txtThirdImpPast.text = toBe[5]
-            //prueba
-//            btn_second.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[3]
-//                    this.txtSecondComplete.text = toBe[4]
-//                    this.txtThirdComplete.text = toBe[5]
-//                    true
-//                } else
-//                    false
-//            })
 
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
@@ -93,16 +94,6 @@ class ImpPastActivity : AppCompatActivity() {
             this.txtFirstImpPast.text = toBe[6]
             this.txtSecondImpPast.text = toBe[7]
             this.txtThirdImpPast.text = toBe[8]
-            //prueba
-//            btn_third.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[6]
-//                    this.txtSecondComplete.text = toBe[7]
-//                    this.txtThirdComplete.text = toBe[8]
-//                    true
-//                } else
-//                    false
-//            })
 
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
@@ -118,17 +109,6 @@ class ImpPastActivity : AppCompatActivity() {
             this.txtFirstImpPast.text = toBe[9]
             this.txtSecondImpPast.text = toBe[10]
             this.txtThirdImpPast.text = toBe[11]
-            //prueba
-//            btn_quarter.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[9]
-//                    this.txtSecondComplete.text = toBe[10]
-//                    this.txtThirdComplete.text = toBe[11]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -143,17 +123,6 @@ class ImpPastActivity : AppCompatActivity() {
             this.txtFirstImpPast.text = toBe[12]
             this.txtSecondImpPast.text = toBe[13]
             this.txtThirdImpPast.text = toBe[14]
-            //prueba
-//            btn_fifth.setOnTouchListener(View.OnTouchListener() { v, event ->
-//                if (event.action == MotionEvent.ACTION_UP) {
-//                    this.txtFirstComplete.text = toBe[12]
-//                    this.txtSecondComplete.text = toBe[13]
-//                    this.txtThirdComplete.text = toBe[14]
-//                    true
-//                } else
-//                    false
-//            })
-
         },{error ->
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
@@ -171,4 +140,5 @@ class ImpPastActivity : AppCompatActivity() {
         val intent = Intent(this, TestImpPastActivity::class.java)
         startActivity(intent)
     }
+
 }
