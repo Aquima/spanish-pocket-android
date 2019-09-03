@@ -17,7 +17,6 @@ class TestPresentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_present)
-
     }
 
     fun backPresent(view: View) {
@@ -42,14 +41,17 @@ class TestPresentActivity : AppCompatActivity() {
     fun random(n: Int) = (Math.random() * n).toInt()
     fun refreshPresent(){
         viewModel = ViewModelProviders.of(this).get(TestPresentViewModel::class.java)
-        this.viewModel.returnTestPresent().subscribe({test:List<String> ->
-            val n = test.count()
-            val r = random(n)
-            this.txt_testPresent.text = test[r]
-            val mutableList = test.toMutableList().removeAt(r)
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        if(switchPresent.isChecked){
+        }else{
+           this.viewModel.returnTestPresent().subscribe({test:List<String> ->
+               val n = test.count()
+               val r = random(n)
+               this.lbl_test_present.text = test[r]
+               val mutableList = test.toMutableList().removeAt(r)
+           },{error ->
+                    //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
+            })
+        }
         this.viewModel.returnPronounPresent().subscribe({pronouns:List<String> ->
             val p = pronouns.count()
             val r = random(p)

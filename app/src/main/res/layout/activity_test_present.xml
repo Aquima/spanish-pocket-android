@@ -74,7 +74,7 @@
                 app:fontFamily="@font/old_standard_tt" />
 
         <TextView
-                android:id="@+id/txt_testPresent"
+                android:id="@+id/lbl_test_present"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -85,7 +85,7 @@
                 app:fontFamily="@font/old_standard_tt" />
 
         <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/switchPresent"
                 android:layout_width="52dp"
                 android:layout_height="22dp"
                 android:layout_marginTop="15dp"
