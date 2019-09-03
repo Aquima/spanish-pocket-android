@@ -38,4 +38,6 @@
     <string name="pronouns_present">HOLD THIS TO GET THE\nENDINGS OF THIS TENSE</string>
     <string name="info_later">CONTINUE HERE LATER</string>
     <string name="interrogant">?</string>
+    <string name="info_get_to_more">GET TO 5 OR MORE!</string>
+    <string name="info_randomizer">RANDOMIZER</string>
 </resources>

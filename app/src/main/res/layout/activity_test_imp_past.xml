@@ -643,4 +643,76 @@
                     android:onClick="deleteImpPast" />
         </LinearLayout>
     </LinearLayout>
+
+    <View
+            android:id="@+id/viewTestImpPast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.7"
+            android:background="@color/colorKeyboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/nothing_you_could_do"
+            android:text="@string/info_get_to_more"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_scoreTest" />
+
+    <TextView
+            android:id="@+id/txt_scoreTest"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/circle_red"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/primaryWhiteColor"
+            android:textSize="13sp"
+            app:fontFamily="@font/pavanam"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout3" />
+
+    <LinearLayout
+            android:id="@+id/linearLayoutTestImpPast"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="33dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/circle_green"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+                android:id="@+id/btn_here_test_present"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_redo"
+                android:onClick="starAnimationImpPast" />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="100dp"
+            android:fontFamily="@font/nothing_you_could_do"
+            android:text="@string/info_randomizer"
+            android:textColor="@color/colorGreen"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayoutTestImpPast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
