@@ -22,6 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
         <Button
+                android:id="@+id/btn_back"
                 android:layout_width="17dp"
                 android:layout_height="25dp"
                 android:background="@drawable/ic_chevron_left"
@@ -681,7 +682,7 @@
             android:id="@+id/linearLayoutTestPresent"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="10dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/circle_green"
             android:gravity="center"
@@ -694,7 +695,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/ic_redo"
-                android:onClick="starAnimationPresent" />
+                android:onClick="hereTestPresent" />
     </LinearLayout>
 
     <TextView
