@@ -112,7 +112,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@drawable/ic_redo"
-                    android:onClick="onStarAnimation" />
+                    android:onClick="onStarAnimationTestSimplePast" />
         </LinearLayout>
 
         <View
@@ -387,7 +387,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/ic_redo"
-                android:onClick="onStarAnimation" />
+                android:onClick="onStarAnimationTestSimplePast"/>
     </LinearLayout>
 
     <TextView

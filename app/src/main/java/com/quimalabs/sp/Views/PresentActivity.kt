@@ -20,8 +20,8 @@ class PresentActivity : AppCompatActivity() {
         setContentView(R.layout.activity_present)
         disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
-
-        this.btn_go_test_present.setOnClickListener { val intent = Intent(this,TestPresentActivity::class.java)
+        this.btn_go_test_present.setOnClickListener {
+            val intent = Intent(this,TestPresentActivity::class.java)
             startActivity(intent)
         }
     }
@@ -57,7 +57,6 @@ class PresentActivity : AppCompatActivity() {
         this.onBackPressed()
     }
     fun setupPronouns(){
-
         this.btn_first.tag = Pronouns.Yo
         this.btn_second.tag = Pronouns.Tu
         this.btn_third.tag = Pronouns.El
@@ -138,17 +137,13 @@ class PresentActivity : AppCompatActivity() {
 
     fun onStarAnimationPresent(view: View){
         val valueAnimator = ValueAnimator.ofFloat(0f, 360f)
-
         valueAnimator.addUpdateListener {
             val value = it.animatedValue as Float
-            // 2
             this.btn_test_present.rotation = value
         }
-
         valueAnimator.interpolator = LinearInterpolator()
         valueAnimator.duration = 600
         valueAnimator.start()
-
         val intent = Intent(this, TestPresentActivity::class.java)
         startActivity(intent)
     }

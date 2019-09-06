@@ -5,7 +5,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-        tools:context=".Views.TestPresentActivity">
+        tools:context=".Views.TestPresentActivity"
+        android:id="@+id/activityTestPresent">
 
     <LinearLayout
             android:id="@+id/linearLayout3"
@@ -636,7 +637,7 @@
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/ic_backspace"
-                    android:onClick="deleteLetter" />
+                    android:onClick="deleteCharacter" />
         </LinearLayout>
     </LinearLayout>
 

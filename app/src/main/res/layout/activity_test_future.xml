@@ -640,7 +640,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:background="@drawable/ic_backspace"
-                    android:onClick="deleteFuture" />
+                    android:onClick="deleteCharacterFuture" />
         </LinearLayout>
     </LinearLayout>
 
@@ -695,7 +695,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
         <Button
-                android:id="@+id/btn_here_test_present"
+                android:id="@+id/btn_here_test_future"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/ic_redo"

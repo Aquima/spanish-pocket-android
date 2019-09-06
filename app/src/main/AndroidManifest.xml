@@ -20,15 +20,16 @@
         <activity android:name=".Views.SimplePastActivity" />
         <activity android:name=".Views.TestPresentActivity" />
         <activity android:name=".Views.PresentActivity" />
-        <activity android:name=".Views.ScoreActivity" />
+        <activity android:name=".Views.ScoreActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".Views.RegisterActivity" />
         <activity android:name=".Views.LogInActivity" />
         <activity android:name=".Views.SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

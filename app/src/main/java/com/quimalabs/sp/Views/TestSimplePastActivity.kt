@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.Button
 import com.quimalabs.sp.R
@@ -17,8 +18,37 @@ class TestSimplePastActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_simple_past)
+
+        loopThrough(findViewById<ViewGroup>(R.id.activityTestPresent))
+        setClickButtonsTestSimplePast(false)
+        this.btn_here_test_simple_past.isClickable = true
     }
 
+    fun hereTestPresent(view: View){
+        this.btn_here_test_simple_past.visibility = View.GONE
+        this.viewTestSimplePast.visibility = View.GONE
+        this.txt_1.visibility = View.GONE
+        this.txt_2.visibility = View.GONE
+        this.txt_scoreTest.visibility = View.GONE
+        this.linearLayoutTestSimplePast.visibility = View.GONE
+        endToolTipsTestSimplePast(view)
+    }
+    private val buttons = ArrayList<Button>() //this is a global variable
+    private fun loopThrough(parent: ViewGroup) {
+        for (i in 0 until parent.childCount) {
+            val child = parent.getChildAt(i)
+            if (child is Button) buttons.add(child)
+            else if (child is ViewGroup) loopThrough(child)
+        }
+    }
+    fun setClickButtonsTestSimplePast(value: Boolean){
+        for(button in buttons){
+            button.isClickable = value
+        }
+    }
+    fun endToolTipsTestSimplePast(view: View){
+        setClickButtonsTestSimplePast(true)
+    }
     fun backStores(view: View) {
         this.onBackPressed()
     }
@@ -61,7 +91,7 @@ class TestSimplePastActivity : AppCompatActivity() {
         val btn:Button = view as Button
         this.txt_test_simple_past.text = currentText + btn.text.toString()
     }
-    fun deleteKeyboardSimplePast(view: View){
+    fun deleteCharacterSimplePast(view: View){
         val textDelete:String = this.txt_test_simple_past.text.toString()
         if (!textDelete.isEmpty()){
             this.txt_test_simple_past.text = textDelete.substring(0,textDelete.length - 1)

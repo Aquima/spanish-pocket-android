@@ -12,19 +12,18 @@ import com.quimalabs.sp.ViewModels.TestPresentViewModel
 import kotlinx.android.synthetic.main.activity_test_present.*
 import android.view.ViewGroup
 
-
-
-
-
-
-
 class TestPresentActivity : AppCompatActivity() {
     lateinit var viewModel:TestPresentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_present)
+
+        loopThrough(findViewById<ViewGroup>(R.id.activityTestPresent))
+        setClickButtons(false)
+        this.btn_here_test_present.isClickable = true
     }
+
     fun hereTestPresent(view: View){
         this.btn_here_test_present.visibility = View.GONE
         this.viewTestPresent.visibility = View.GONE
@@ -32,33 +31,24 @@ class TestPresentActivity : AppCompatActivity() {
         this.txt_2.visibility = View.GONE
         this.txt_scoreTest.visibility = View.GONE
         this.linearLayoutTestPresent.visibility = View.GONE
-        clickButtons(view)
+        endToolTips(view)
     }
-    fun disableClickButtons(view: View){
-        this.btn_back.isClickable = false
-        this.switchPresent.isClickable = false
-        this.btn_refresh.isClickable = false
-        this.btn_bakSpace.isClickable = false
 
-        val viewgroup = view as ViewGroup
-        for (i in 0 until viewgroup.childCount) {
-            val v1 = viewgroup.getChildAt(i)
-            //if (v1 is ViewGroup) show_children(v1)
-            v1.isClickable = false
+    private val buttons = ArrayList<Button>() //this is a global variable
+    private fun loopThrough(parent: ViewGroup) {
+        for (i in 0 until parent.childCount) {
+            val child = parent.getChildAt(i)
+            if (child is Button) buttons.add(child)
+            else if (child is ViewGroup) loopThrough(child)
         }
     }
-    fun clickButtons(view: View){
-        this.btn_back.isClickable = true
-        this.switchPresent.isClickable = true
-        this.btn_refresh.isClickable = true
-        this.btn_bakSpace.isClickable = true
-
-        val viewgroup = view as ViewGroup
-        for (i in 0 until viewgroup.childCount) {
-            val v1 = viewgroup.getChildAt(i)
-            //if (v1 is ViewGroup) show_children(v1)
-            v1.isClickable = true
+    fun setClickButtons(value: Boolean){
+        for(button in buttons){
+            button.isClickable = value
         }
+    }
+    fun endToolTips(view: View){
+        setClickButtons(true)
     }
 
     fun backPresent(view: View) {
@@ -73,8 +63,6 @@ class TestPresentActivity : AppCompatActivity() {
         animation.interpolator = LinearInterpolator()
         animation.duration = 600
         animation.start()
-
-        //insert
 
         this.txt_test_present.text = ""
         refreshPresent()
@@ -106,7 +94,7 @@ class TestPresentActivity : AppCompatActivity() {
         this.txt_test_present.text = currentText + btn.text.toString()
     }
 
-    fun deleteLetter(view: View){
+    fun deleteCharacter(view: View){
         val deleteText:String =  this.txt_test_present.text.toString()
         if(!deleteText.isEmpty()){
             this.txt_test_present.text = deleteText.substring(0,deleteText.length-1)

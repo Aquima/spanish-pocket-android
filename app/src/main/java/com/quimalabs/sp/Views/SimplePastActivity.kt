@@ -19,7 +19,10 @@ class SimplePastActivity : AppCompatActivity() {
         setContentView(R.layout.activity_simple_past)
         disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(SimplePastViewModel::class.java)
-
+        this.btn_go_test_simple_past.setOnClickListener {
+            val intent = Intent(this, TestSimplePastActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun hereSimplePast(view: View) {
@@ -53,7 +56,18 @@ class SimplePastActivity : AppCompatActivity() {
     fun backStores(view: View) {
         this.onBackPressed()
     }
-
+    fun onStarAnimationTestSimplePast(view: View){
+        val valueAnimatorSimplePast: ValueAnimator =ValueAnimator.ofFloat(0f,360f)
+        valueAnimatorSimplePast.addUpdateListener {
+            val value = it.animatedValue as Float
+            this.btn_test_simple_past.rotation = value
+        }
+        valueAnimatorSimplePast.interpolator = LinearInterpolator()
+        valueAnimatorSimplePast.duration = 600
+        valueAnimatorSimplePast.start()
+        val intentSimplePast = Intent(this, TestSimplePastActivity::class.java)
+        startActivity(intentSimplePast)
+    }
     fun pronounFirstPastSimple(view: View){
         this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
 
@@ -125,19 +139,4 @@ class SimplePastActivity : AppCompatActivity() {
             //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
         })
     }
-    fun onStarAnimation(view: View){
-        val valueAnimator=ValueAnimator.ofFloat(0f,360f)
-        valueAnimator.addUpdateListener {
-            val value = it.animatedValue as Float
-            this.btn_test_simple_past.rotation = value
-        }
-        valueAnimator.interpolator = LinearInterpolator()
-        valueAnimator.duration = 600
-        valueAnimator.start()
-
-        val intent = Intent(this,TestSimplePastActivity::class.java)
-        startActivity(intent)
-    }
-
-
 }

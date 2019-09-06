@@ -5,11 +5,15 @@ import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 import android.widget.Button
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.TestFutureViewModel
+import kotlinx.android.synthetic.main.activity_future.*
 import kotlinx.android.synthetic.main.activity_test_future.*
+import kotlinx.android.synthetic.main.activity_test_future.txt_1
+import kotlinx.android.synthetic.main.activity_test_future.txt_2
 
 class TestFutureActivity : AppCompatActivity() {
     lateinit var viewModel:TestFutureViewModel
@@ -17,8 +21,37 @@ class TestFutureActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_future)
+
+        loopThrough(findViewById<ViewGroup>(R.id.activityTestPresent))
+        setClickButtonsTestSimplePast(false)
+        this.btn_here_test_future.isClickable = true
     }
 
+    fun hereTestPresent(view: View){
+        this.btn_here_test_future.visibility = View.GONE
+        this.viewTestFuture.visibility = View.GONE
+        this.txt_1.visibility = View.GONE
+        this.txt_2.visibility = View.GONE
+        this.txt_scoreTest.visibility = View.GONE
+        this.linearLayoutTestFuture.visibility = View.GONE
+        endToolTipsTestSimplePast(view)
+    }
+    private val buttons = ArrayList<Button>() //this is a global variable
+    private fun loopThrough(parent: ViewGroup) {
+        for (i in 0 until parent.childCount) {
+            val child = parent.getChildAt(i)
+            if (child is Button) buttons.add(child)
+            else if (child is ViewGroup) loopThrough(child)
+        }
+    }
+    fun setClickButtonsTestSimplePast(value: Boolean){
+        for(button in buttons){
+            button.isClickable = value
+        }
+    }
+    fun endToolTipsTestSimplePast(view: View){
+        setClickButtonsTestSimplePast(true)
+    }
     fun futureBack(view: View) {
         this.onBackPressed()
     }
@@ -59,7 +92,7 @@ class TestFutureActivity : AppCompatActivity() {
         val btn:Button = view as Button
         this.txt_test_Future.text = currentText + btn.text.toString()
     }
-    fun deleteFuture(view: View){
+    fun deleteCharacterFuture(view: View){
         val deleteText:String = this.txt_test_Future.text.toString()
         if (!deleteText.isEmpty()){
             this.txt_test_Future.text = deleteText.substring(0,deleteText.length-1)

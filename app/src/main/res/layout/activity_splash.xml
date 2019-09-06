@@ -16,5 +16,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="VectorDrawableCompat"
-            tools:srcCompat="@drawable/ic_logo_transpte" />
+            tools:srcCompat="@drawable/logo_basico_verde" />
 </android.support.constraint.ConstraintLayout>
