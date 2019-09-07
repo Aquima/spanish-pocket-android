@@ -6,7 +6,8 @@
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
         android:layout_weight="1"
-        tools:context=".Views.TestSimplePastActivity">
+        tools:context=".Views.TestSimplePastActivity"
+        android:id="@+id/activityTestSimplePast">
 
     <LinearLayout
             android:id="@+id/linearLayout3"
@@ -702,7 +703,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/ic_redo"
-                android:onClick="starAnimationSimplePast" />
+                android:onClick="hereTestSimplePast" />
     </LinearLayout>
 
     <TextView

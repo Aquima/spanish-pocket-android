@@ -19,12 +19,12 @@ class TestImpPastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_imp_past)
 
-        loopThrough(findViewById<ViewGroup>(R.id.activityTestPresent))
+        loopThrough(findViewById<ViewGroup>(R.id.activityTestImpPast))
         setClickButtonsTestSimplePast(false)
         this.btn_here_test_imp_past.isClickable = true
     }
 
-    fun hereTestPresent(view: View){
+    fun hereTestImpPast(view: View){
         this.btn_here_test_imp_past.visibility = View.GONE
         this.viewTestImpPast.visibility = View.GONE
         this.txt_1.visibility = View.GONE
@@ -62,10 +62,13 @@ class TestImpPastActivity : AppCompatActivity() {
         animation.interpolator = LinearInterpolator()
         animation.duration = 600
         animation.start()
+
+        this.txt_test_Imp_Past.text = ""
+        refreshImPast()
     }
     //
     fun random(n: Int) = (Math.random() * n).toInt()
-    fun refreshPresent(){
+    fun refreshImPast(){
         viewModel = ViewModelProviders.of(this).get(TestImpPastViewModel::class.java)
         if(switchImpPast.isChecked){
         }else{

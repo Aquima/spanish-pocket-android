@@ -21,7 +21,7 @@ class SimplePastActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this).get(SimplePastViewModel::class.java)
         this.btn_go_test_simple_past.setOnClickListener {
             val intent = Intent(this, TestSimplePastActivity::class.java)
-            startActivity(intent)
+            this.startActivity(intent)
         }
     }
 

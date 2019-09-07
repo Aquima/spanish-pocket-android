@@ -22,12 +22,12 @@ class TestFutureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_future)
 
-        loopThrough(findViewById<ViewGroup>(R.id.activityTestPresent))
+        loopThrough(findViewById<ViewGroup>(R.id.activityTestFuture))
         setClickButtonsTestSimplePast(false)
         this.btn_here_test_future.isClickable = true
     }
 
-    fun hereTestPresent(view: View){
+    fun hereTestFuture(view: View){
         this.btn_here_test_future.visibility = View.GONE
         this.viewTestFuture.visibility = View.GONE
         this.txt_1.visibility = View.GONE
@@ -64,10 +64,12 @@ class TestFutureActivity : AppCompatActivity() {
         animation.interpolator = LinearInterpolator()
         animation.duration = 600
         animation.start()
+        this.txt_test_Future.text = ""
+        refreshFuture()
     }
     //
     fun random(n: Int) = (Math.random() * n).toInt()
-    fun refreshPresent(){
+    fun refreshFuture(){
         viewModel = ViewModelProviders.of(this).get(TestFutureViewModel::class.java)
         if(switchFuture.isChecked){
         }else{
