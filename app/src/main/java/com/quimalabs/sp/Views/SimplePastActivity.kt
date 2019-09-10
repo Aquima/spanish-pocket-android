@@ -1,9 +1,9 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
@@ -18,7 +18,7 @@ class SimplePastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_simple_past)
         disableClickButtons(view)
-        viewModel = ViewModelProviders.of(this).get(SimplePastViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(SimplePastViewModel::class.java)
         this.btn_go_test_simple_past.setOnClickListener {
             val intent = Intent(this, TestSimplePastActivity::class.java)
             this.startActivity(intent)

@@ -1,12 +1,13 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.FutureViewModel
 import kotlinx.android.synthetic.main.activity_future.*
@@ -18,8 +19,7 @@ class FutureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_future)
         disableClickButtons(view)
-        viewModel = ViewModelProviders.of(this).get(FutureViewModel::class.java)
-
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(FutureViewModel::class.java)
     }
     fun hereFuture(view: View) {
         this.btnFuture.visibility = View.GONE

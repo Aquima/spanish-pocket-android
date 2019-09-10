@@ -1,8 +1,8 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
@@ -70,7 +70,7 @@ class TestPresentActivity : AppCompatActivity() {
     //
     fun random(n: Int) = (Math.random() * n).toInt()
     fun refreshPresent(){
-        viewModel = ViewModelProviders.of(this).get(TestPresentViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(TestPresentViewModel::class.java)
         if(switchPresent.isChecked){
         }else{
            this.viewModel.returnTestPresent().subscribe({test:List<String> ->

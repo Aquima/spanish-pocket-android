@@ -1,7 +1,7 @@
 package com.quimalabs.sp.Views
 
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.SplashViewModel
@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         supportActionBar?.hide()
 
-        viewModel = ViewModelProviders.of(this).get(SplashViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(SplashViewModel::class.java)
         //hay que mejorar
         viewModel.goToLogIn(this,this)
 

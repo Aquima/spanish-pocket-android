@@ -1,8 +1,8 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -70,7 +70,7 @@ class TestFutureActivity : AppCompatActivity() {
     //
     fun random(n: Int) = (Math.random() * n).toInt()
     fun refreshFuture(){
-        viewModel = ViewModelProviders.of(this).get(TestFutureViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(TestFutureViewModel::class.java)
         if(switchFuture.isChecked){
         }else{
             this.viewModel.returnTestFuture().subscribe({test:List<String> ->

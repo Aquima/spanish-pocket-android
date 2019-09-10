@@ -1,16 +1,20 @@
 package com.quimalabs.sp.Models
 
 import android.app.Activity
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+
 import io.reactivex.Observable
 
 class ApiClient {
     constructor(activity:Activity){
         this.auth = FirebaseAuth.getInstance()
-        this.currentActivity = activity
+        this.currentActivity = activity//reference activity
     }
     private lateinit var currentActivity:Activity
     private lateinit var auth: FirebaseAuth
+    val db = FirebaseFirestore.getInstance()
 
     fun signIn(email:String,password:String):Observable<WongUser>{
         val observable:Observable<WongUser> = Observable.create { observer ->
@@ -56,4 +60,63 @@ class ApiClient {
         }
         return  observable
     }
+    fun getWords(): Observable<Word> {
+        val TAG = "spocket"
+        val observable:Observable<Word> = Observable.create { observer ->
+            db.collection("words")
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        Log.d(TAG, "${document.id} => ${document.data}")
+                        val newWord = document.toObject(Word::class.java)
+                        newWord.uid = document.id
+                        observer.onNext(newWord)
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.w(TAG, "Error getting documents.", exception)
+                }
+        }
+        return  observable
+    }
+    /*
+    params:
+    time: present, future, past imperfect, past
+     */
+    fun getTimeWords(time:String,word: Word): Observable<Pronouns> {
+        val TAG = "spocket"
+        val observable:Observable<Pronouns> = Observable.create { observer ->
+            db.collection("/words/${word.uid}/${time}")///words/F6pHdu6nbJhXfHrY0FCq/present
+                .get()
+                .addOnSuccessListener { result ->
+                    for (document in result) {
+                        Log.d(TAG, "${document.id} => ${document.data}")
+                        val newPronouns = document.toObject(Pronouns::class.java)
+                        newPronouns.uid = document.id
+                        observer.onNext(newPronouns)
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.w(TAG, "Error getting documents.", exception)
+                }
+        }
+        return  observable
+    }
+}
+//data class MyObject(var foo: String = "")
+data class Word(var base: String = "") {
+    lateinit var uid:String
+//    lateinit var base:String
+}
+data class Pronouns(var el: String = "",
+                    var ella: String  = "",
+                    var ellas: String  = "",
+                    var ellos: String  = "",
+                    var nosotros: String  = "",
+                    var tu: String  = "",
+                    var usted: String  = "",
+                    var ustedes: String  = "",
+                    var yo: String  = "") {
+    lateinit var uid:String
+//    lateinit var base:String
 }

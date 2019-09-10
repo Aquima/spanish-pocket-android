@@ -1,8 +1,8 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
-import android.support.v7.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -69,7 +69,7 @@ class TestSimplePastActivity : AppCompatActivity() {
     //
     fun random(n: Int) = (Math.random() * n).toInt()
     fun refreshSimplePast(){
-        viewModel = ViewModelProviders.of(this).get(TestSimplePastViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(TestSimplePastViewModel::class.java)
         if(switchSimplePast.isChecked){
         }else{
             this.viewModel.returnTestSimplePast().subscribe({test:List<String> ->

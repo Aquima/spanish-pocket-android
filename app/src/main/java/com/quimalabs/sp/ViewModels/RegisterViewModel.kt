@@ -1,7 +1,7 @@
 package com.quimalabs.sp.ViewModels
 
 import android.app.Activity
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import com.quimalabs.sp.Models.ApiClient
 import com.quimalabs.sp.Models.WongUser
 import io.reactivex.Observable

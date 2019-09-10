@@ -1,14 +1,13 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
 import com.quimalabs.sp.R
-import com.quimalabs.sp.ViewModels.Enumerators.Pronouns
 import com.quimalabs.sp.ViewModels.PresentViewModel
 import kotlinx.android.synthetic.main.activity_present.*
 
@@ -19,7 +18,7 @@ class PresentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_present)
         disableClickButtons(view)
-        viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
+        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(PresentViewModel::class.java)
         this.btn_go_test_present.setOnClickListener {
             val intent = Intent(this,TestPresentActivity::class.java)
             startActivity(intent)
@@ -57,11 +56,11 @@ class PresentActivity : AppCompatActivity() {
         this.onBackPressed()
     }
     fun setupPronouns(){
-        this.btn_first.tag = Pronouns.Yo
-        this.btn_second.tag = Pronouns.Tu
-        this.btn_third.tag = Pronouns.El
-        this.btn_quarter.tag = Pronouns.Nosotros
-        this.btn_fifth.tag = Pronouns.Ellos
+//        this.btn_first.tag = Pronouns.Yo
+//        this.btn_second.tag = Pronouns.Tu
+//        this.btn_third.tag = Pronouns.El
+//        this.btn_quarter.tag = Pronouns.Nosotros
+//        this.btn_fifth.tag = Pronouns.Ellos
     }
 
     fun pronounFirst(view: View){
