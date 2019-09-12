@@ -1,5 +1,6 @@
 package com.quimalabs.sp.ViewModels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.quimalabs.sp.Models.GlobalData
 import com.quimalabs.sp.ViewModels.Enumerators.EnumPronouns
@@ -19,6 +20,9 @@ class ImpPastViewModel:ViewModel() {
         var drawWords:ArrayList<DrawWord> = ArrayList()
         GlobalData.listWordsToScoreViewData.map { word ->
             word.pronouns.map { pronouns ->
+
+                Log.d("spocket",word.toString())
+                Log.d("spocket",pronouns.toString())
                 if (pronouns.time=="past imperfect"){
                     var result = when(enum){
                         EnumPronouns.Yo -> pronouns.yo

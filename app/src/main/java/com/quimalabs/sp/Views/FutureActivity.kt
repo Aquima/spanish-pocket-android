@@ -1,7 +1,6 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

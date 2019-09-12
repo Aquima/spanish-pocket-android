@@ -89,17 +89,6 @@ class PresentActivity : AppCompatActivity() {
         this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
         this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
-//        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-////            if (this.btn_first.setOnTouchListener(true))
-//            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-//            this.txtFirstComplete.text = toBe[0]
-//            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-//            this.txtSecondComplete.text = toBe[1]
-//            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-//            this.txtThirdComplete.text = toBe[2]
-//        },{error ->
-////            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-//        })
     }
     fun pronounSecond(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Tu)
