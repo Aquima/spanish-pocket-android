@@ -1,9 +1,7 @@
 package com.quimalabs.sp.ViewModels
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.quimalabs.sp.Models.GlobalData
-import com.quimalabs.sp.Models.Pronouns
 import com.quimalabs.sp.ViewModels.Enumerators.EnumPronouns
 import io.reactivex.Observable
 
@@ -13,11 +11,9 @@ class PresentViewModel: ViewModel() {
 
         val observable:Observable<List<String>> = Observable.create { observer ->
             val list =  listOf("O", "O", "O","AS","ES","ES","A","E","E","AMOS","EMOS","IMOS","AN","EN","EN")
-
             observer.onNext(list)
         }
         return observable
-
     }
     fun getPronounsForPresent(enum:EnumPronouns):List<DrawWord> {
        var drawWords:ArrayList<DrawWord> = ArrayList()
@@ -33,13 +29,11 @@ class PresentViewModel: ViewModel() {
                     }
                     val drawWord = DrawWord(word.base,result)
                     drawWords.add(drawWord)
-
                 }
             }
         }
-
         return drawWords
     }
 }
-class DrawWord(var base: String = "", var variant:String = "") {
+class DrawWord(var base: String = "", var variant:String = ""){
 }

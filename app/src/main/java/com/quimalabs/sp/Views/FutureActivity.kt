@@ -7,8 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+import androidx.lifecycle.ViewModelProviders
 
 import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.DrawWord
+import com.quimalabs.sp.ViewModels.Enumerators.EnumPronouns
 import com.quimalabs.sp.ViewModels.FutureViewModel
 import kotlinx.android.synthetic.main.activity_future.*
 
@@ -19,16 +22,28 @@ class FutureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_future)
         disableClickButtons(view)
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(FutureViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(FutureViewModel::class.java)
+        if (viewModel.isFirstime==false){
+            viewModel.isFirstime=true
+            toolsTipsVisibility(viewFuture)
+        }
     }
     fun hereFuture(view: View) {
         this.btnFuture.visibility = View.GONE
         this.btn_go_test_Future.visibility = View.GONE
-        this.viewFuture.visibility = View.GONE
+        this.viewToolsTipsFuture.visibility = View.GONE
         this.txt_1.visibility = View.GONE
         this.txt_2.visibility = View.GONE
         this.linearLayoutFuture.visibility = View.GONE
         clickButtons(view)
+    }
+    fun toolsTipsVisibility(view: View){
+        this.btnFuture.visibility = View.VISIBLE
+        this.btn_go_test_Future.visibility = View.VISIBLE
+        this.viewToolsTipsFuture.visibility = View.VISIBLE
+        this.txt_1.visibility = View.VISIBLE
+        this.txt_2.visibility = View.VISIBLE
+        this.linearLayoutFuture.visibility = View.VISIBLE
     }
     fun disableClickButtons(view: View){
         this.btn_back.isClickable = false
@@ -54,79 +69,68 @@ class FutureActivity : AppCompatActivity() {
     }
 
     fun pronounFirstFuture(view: View){
-        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Yo)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
 
-            //  if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstFuture.text = toBe[0]
-            this.txtSecondFuture.text = toBe[1]
-            this.txtThirdFuture.text = toBe[2]
-
-            this.txtFirstFuture.visibility = View.VISIBLE
-            this.txtSecondFuture.visibility = View.VISIBLE
-            this.txtThirdFuture.visibility = View.VISIBLE
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        this.txtFirstFuture.visibility = View.VISIBLE
+        this.txtSecondFuture.visibility = View.VISIBLE
+        this.txtThirdFuture.visibility = View.VISIBLE
     }
     fun pronounSecondFuture(view: View){
-        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstFuture.text = toBe[3]
-            this.txtSecondFuture.text = toBe[4]
-            this.txtThirdFuture.text = toBe[5]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Tu)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
     }
     fun pronounThirdFuture(view: View){
-        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstFuture.text = toBe[6]
-            this.txtSecondFuture.text = toBe[7]
-            this.txtThirdFuture.text = toBe[8]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.El)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
     }
     fun pronounQuarterFuture(view: View){
-        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstFuture.text = toBe[9]
-            this.txtSecondFuture.text = toBe[10]
-            this.txtThirdFuture.text = toBe[11]
-
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Nosotros)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
     }
     fun pronounFifthFuture(view: View){
-        this.viewModel.retriveFuture().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstFuture.text = toBe[12]
-            this.txtSecondFuture.text = toBe[13]
-            this.txtThirdFuture.text = toBe[14]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Ellos)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
     }
 
     fun onStarAnimationFuture(view: View){

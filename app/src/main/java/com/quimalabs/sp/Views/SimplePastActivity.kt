@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+import androidx.lifecycle.ViewModelProviders
 import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.DrawWord
+import com.quimalabs.sp.ViewModels.Enumerators.EnumPronouns
 import com.quimalabs.sp.ViewModels.SimplePastViewModel
 import kotlinx.android.synthetic.main.activity_simple_past.*
 
@@ -18,21 +21,33 @@ class SimplePastActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_simple_past)
         disableClickButtons(view)
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(SimplePastViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(SimplePastViewModel::class.java)
         this.btn_go_test_simple_past.setOnClickListener {
             val intent = Intent(this, TestSimplePastActivity::class.java)
             this.startActivity(intent)
+        }
+        if (viewModel.isFirstime==false){
+            viewModel.isFirstime=true
+            toolsTipsVisibility(viewSimplePast)
         }
     }
 
     fun hereSimplePast(view: View) {
         this.btnSimplePast.visibility = View.GONE
         this.btn_go_test_simple_past.visibility = View.GONE
-        this.viewSimplePast.visibility = View.GONE
+        this.viewToolsTipsSimplePast.visibility = View.GONE
         this.txt_1.visibility = View.GONE
         this.txt_2.visibility = View.GONE
         this.linearLayoutSimplePast.visibility = View.GONE
         clickButtons(view)
+    }
+    fun toolsTipsVisibility(view: View){
+        this.btnSimplePast.visibility = View.VISIBLE
+        this.btn_go_test_simple_past.visibility = View.VISIBLE
+        this.viewToolsTipsSimplePast.visibility = View.VISIBLE
+        this.txt_1.visibility = View.VISIBLE
+        this.txt_2.visibility = View.VISIBLE
+        this.linearLayoutSimplePast.visibility = View.VISIBLE
     }
     fun disableClickButtons(view: View){
         this.btn_back.isClickable = false
@@ -69,74 +84,63 @@ class SimplePastActivity : AppCompatActivity() {
         startActivity(intentSimplePast)
     }
     fun pronounFirstPastSimple(view: View){
-        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstPastSimple.text = toBe[0]
-            this.txtSecondPastSimple.text = toBe[1]
-            this.txtThirdPastSimple.text = toBe[2]
-            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Yo)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
+        this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
+        this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
+        this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
     }
     fun pronounSecondPastSimple(view: View){
-        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstPastSimple.text = toBe[3]
-            this.txtSecondPastSimple.text = toBe[4]
-            this.txtThirdPastSimple.text = toBe[5]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Tu)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
+        this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
+        this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
+        this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
     }
     fun pronounThirdPastSimple(view: View){
-        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstPastSimple.text = toBe[6]
-            this.txtSecondPastSimple.text = toBe[7]
-            this.txtThirdPastSimple.text = toBe[8]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.El)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
+        this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
+        this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
+        this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
     }
     fun pronounQuarterPastSimple(view: View){
-        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstPastSimple.text = toBe[9]
-            this.txtSecondPastSimple.text = toBe[10]
-            this.txtThirdPastSimple.text = toBe[11]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Nosotros)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
+        this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
+        this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
+        this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
     }
     fun pronounFifthPastSimple(view: View){
-        this.viewModel.retrivePastSimple().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstPastSimple.text = toBe[12]
-            this.txtSecondPastSimple.text = toBe[13]
-            this.txtThirdPastSimple.text = toBe[14]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Ellos)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
+        this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
+        this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
+        this.txtFirstPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdPastSimple.setTextColor(getResources().getColorStateList(R.color.colorGreen))
     }
 }

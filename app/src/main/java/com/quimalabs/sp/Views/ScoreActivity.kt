@@ -7,12 +7,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
-import com.quimalabs.sp.Models.GlobalData
-import com.quimalabs.sp.Models.Pronouns
 import com.quimalabs.sp.Models.Word
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.ScoreViewModel
-import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_score.*
@@ -49,7 +46,6 @@ class ScoreActivity : AppCompatActivity() {
                     Log.d("spocket",word.base)
                     Log.d("spocket",word.uid)
                     getAllWordsData(word)
-
                 },
                 { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show()
@@ -58,7 +54,6 @@ class ScoreActivity : AppCompatActivity() {
                     //onComplete ya termino de traerme toda la data
                    // Log.d("spocket", listWords.size.toString())
                 }
-
         )
         observableWord
     }
@@ -68,7 +63,6 @@ class ScoreActivity : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { success ->
-
 
                 },
                 { error ->
@@ -84,7 +78,6 @@ class ScoreActivity : AppCompatActivity() {
                     }
                     // Log.d("spocket", listWords.size.toString())
                 }
-
             )
     }
     fun infoScores(view: View) {

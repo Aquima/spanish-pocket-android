@@ -28,19 +28,26 @@ class PresentActivity : AppCompatActivity() {
         if ( viewModel.isFirstime == false) {
             viewModel.isFirstime = true
             disableClickButtons(view)
-            this.viewPresentBlack.visibility = View.VISIBLE
+            toolsTipsVisibility(viewPresent)
         }
     }
 
     fun herePresent(view: View){
         this.btnPresent.visibility = View.GONE
         this.btn_go_test_present.visibility = View.GONE
-        this.viewPresent.visibility = View.GONE
+        this.viewToolsTipsPresent.visibility = View.GONE
         this.txt_1.visibility = View.GONE
         this.txt_2.visibility = View.GONE
         this.linearLayout6.visibility = View.GONE
-        this.viewPresentBlack.visibility = View.GONE
         clickButtons(view)
+    }
+    fun toolsTipsVisibility(view: View){
+        this.btnPresent.visibility = View.VISIBLE
+        this.btn_go_test_present.visibility = View.VISIBLE
+        this.viewToolsTipsPresent.visibility = View.VISIBLE
+        this.txt_1.visibility = View.VISIBLE
+        this.txt_2.visibility = View.VISIBLE
+        this.linearLayout6.visibility = View.VISIBLE
     }
     fun disableClickButtons(view: View){
         this.btn_back.isClickable = false
@@ -72,7 +79,10 @@ class PresentActivity : AppCompatActivity() {
     }
 
     fun pronounFirst(view: View){
-        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Ellos)
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Yo)
+        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -80,7 +90,6 @@ class PresentActivity : AppCompatActivity() {
         this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
 //        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-//
 ////            if (this.btn_first.setOnTouchListener(true))
 //            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
 //            this.txtFirstComplete.text = toBe[0]
@@ -93,60 +102,52 @@ class PresentActivity : AppCompatActivity() {
 //        })
     }
     fun pronounSecond(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[3]
-            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondComplete.text = toBe[4]
-            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdComplete.text = toBe[5]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Tu)
+        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
+        this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
+        this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
+        this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
     }
     fun pronounThird(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[6]
-            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondComplete.text = toBe[7]
-            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdComplete.text = toBe[8]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.El)
+        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
+        this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
+        this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
+        this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
     }
     fun pronounQuarter(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[9]
-            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondComplete.text = toBe[10]
-            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdComplete.text = toBe[11]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Nosotros)
+        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
+        this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
+        this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
+        this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
     }
     fun pronounFifth(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-
-            //            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[12]
-            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondComplete.text = toBe[13]
-            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdComplete.text = toBe[14]
-        },{error ->
-            //            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Ellos)
+        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
+        this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
+        this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
+        this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
     }
 
     fun onStarAnimationPresent(view: View){
