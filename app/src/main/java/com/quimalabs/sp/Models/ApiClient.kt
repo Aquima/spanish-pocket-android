@@ -16,15 +16,15 @@ class ApiClient {
     private lateinit var auth: FirebaseAuth
     val db = FirebaseFirestore.getInstance()
 
-    fun signIn(email:String,password:String):Observable<WongUser>{
-        val observable:Observable<WongUser> = Observable.create { observer ->
+    fun signIn(email:String,password:String):Observable<SPUser>{
+        val observable:Observable<SPUser> = Observable.create { observer ->
             this.auth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this.currentActivity) { task ->
                 if (task.isSuccessful) {
 
                     var email:String? = this.auth.currentUser?.email
                     var isEmailVerified:Boolean? = this.auth.currentUser?.isEmailVerified
                     if (email != null && isEmailVerified!= null){
-                        val meUser = WongUser(email,isEmailVerified)
+                        val meUser = SPUser(email,isEmailVerified)
                         observer.onNext(meUser)
                         observer.onComplete()
                     }
@@ -38,8 +38,8 @@ class ApiClient {
         return observable
     }
 
-    fun createAccount(email:String,password:String):Observable<WongUser>{
-        val observable:Observable<WongUser> = Observable.create { observer ->
+    fun createAccount(email:String,password:String):Observable<SPUser>{
+        val observable:Observable<SPUser> = Observable.create { observer ->
             auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this.currentActivity) { task ->
                 if(task.isSuccessful){
 
@@ -47,7 +47,7 @@ class ApiClient {
                     var email:String? = this.auth.currentUser?.email
                     var isEmailVerified:Boolean? = this.auth.currentUser?.isEmailVerified
                     if(email != null && isEmailVerified != null){
-                        val meUser = WongUser(email,isEmailVerified)
+                        val meUser = SPUser(email,isEmailVerified)
                         observer.onNext(meUser)
                         observer.onComplete()
                     }
@@ -72,6 +72,7 @@ class ApiClient {
                         newWord.uid = document.id
                         observer.onNext(newWord)
                     }
+                    observer.onComplete()
                 }
                 .addOnFailureListener { exception ->
                     Log.w(TAG, "Error getting documents.", exception)
@@ -93,8 +94,10 @@ class ApiClient {
                         Log.d(TAG, "${document.id} => ${document.data}")
                         val newPronouns = document.toObject(Pronouns::class.java)
                         newPronouns.uid = document.id
+                        newPronouns.time = time
                         observer.onNext(newPronouns)
                     }
+                    observer.onComplete()
                 }
                 .addOnFailureListener { exception ->
                     Log.w(TAG, "Error getting documents.", exception)
@@ -106,7 +109,7 @@ class ApiClient {
 //data class MyObject(var foo: String = "")
 data class Word(var base: String = "") {
     lateinit var uid:String
-//    lateinit var base:String
+    var pronouns:ArrayList<Pronouns> = ArrayList()
 }
 data class Pronouns(var el: String = "",
                     var ella: String  = "",
@@ -118,5 +121,5 @@ data class Pronouns(var el: String = "",
                     var ustedes: String  = "",
                     var yo: String  = "") {
     lateinit var uid:String
-//    lateinit var base:String
+    lateinit var time:String
 }

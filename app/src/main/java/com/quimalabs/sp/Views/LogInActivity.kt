@@ -1,6 +1,5 @@
 package com.quimalabs.sp.Views
 
-import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,13 +10,11 @@ import android.view.View
 import android.widget.Toast
 import com.jakewharton.rxbinding3.view.clicks
 import com.jakewharton.rxbinding3.widget.textChanges
-import com.quimalabs.sp.Models.WongUser
+import com.quimalabs.sp.Models.SPUser
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.LogInViewModel
 import io.reactivex.Observable
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.functions.BiFunction
-import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_log_in.*
 
 
@@ -65,7 +62,7 @@ class LogInActivity : AppCompatActivity() {
 
             val email = txt_email.text.toString()
             val password = txt_password.text.toString()
-            viewModel.signIn(email,password,this).subscribe({user:WongUser ->
+            viewModel.signIn(email,password,this).subscribe({user:SPUser ->
                // Toast.makeText(this, "Hola ${user.email}, has iniciado Sesión" , Toast.LENGTH_LONG).show()
 
                 Handler(Looper.getMainLooper()).post {
@@ -85,7 +82,7 @@ class LogInActivity : AppCompatActivity() {
         val email = txt_email.text.toString()
         val password = txt_password.text.toString()
 
-        viewModel.signIn(email,password,this).subscribe({user:WongUser ->
+        viewModel.signIn(email,password,this).subscribe({user:SPUser ->
             Toast.makeText(this, "Hola ${user.email}, has iniciado Sesión" , Toast.LENGTH_LONG).show()
         },{error ->
             Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()

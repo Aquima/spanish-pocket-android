@@ -7,9 +7,12 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.quimalabs.sp.Models.GlobalData
+import com.quimalabs.sp.Models.Pronouns
 import com.quimalabs.sp.Models.Word
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.ScoreViewModel
+import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_score.*
@@ -38,33 +41,51 @@ class ScoreActivity : AppCompatActivity() {
         this .setUp()
     }
     fun setUp(){
-        val observableWord = viewModel.getWors(this).subscribeOn(Schedulers.io())
+
+        val observableWord = viewModel.getWords(this).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { word ->
                     Log.d("spocket",word.base)
                     Log.d("spocket",word.uid)
-                    this.getPronouns(word)
+                    getAllWordsData(word)
+
                 },
                 { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show()
+                },
+                {
+                    //onComplete ya termino de traerme toda la data
+                   // Log.d("spocket", listWords.size.toString())
                 }
-            )
+
+        )
         observableWord
     }
-    fun getPronouns(word:Word){
-        val observablePronouns = viewModel.getPronouns(this,word,"present").subscribeOn(Schedulers.io())
+    var intTotalIteration = 0
+    fun getAllWordsData(word:Word){
+        this.viewModel.getWordsWithPronouns(this,word).subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
-                { pronouns ->
-                    Log.d("spocket",pronouns.ustedes)
-                    Log.d("spocket",pronouns.uid)
+                { success ->
+
+
                 },
                 { error ->
                     Toast.makeText(this, error.message, Toast.LENGTH_SHORT).show()
+                },
+                {
+                    //onComplete ya termino de traerme toda la data
+                    intTotalIteration +=1
+                    if (intTotalIteration == 3 ){
+                        //quitar el cargando
+                        Log.d("spocket","completado toda la data" + intTotalIteration.toString())
+                        viewModel.saveData()
+                    }
+                    // Log.d("spocket", listWords.size.toString())
                 }
+
             )
-        observablePronouns
     }
     fun infoScores(view: View) {
         btn_info_score.visibility = View.GONE

@@ -1,13 +1,15 @@
 package com.quimalabs.sp.Views
 
 import android.animation.ValueAnimator
-import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+import androidx.lifecycle.ViewModelProviders
 import com.quimalabs.sp.R
+import com.quimalabs.sp.ViewModels.DrawWord
+import com.quimalabs.sp.ViewModels.Enumerators.EnumPronouns
 import com.quimalabs.sp.ViewModels.PresentViewModel
 import kotlinx.android.synthetic.main.activity_present.*
 
@@ -17,11 +19,16 @@ class PresentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_present)
-        disableClickButtons(view)
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(PresentViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
+
         this.btn_go_test_present.setOnClickListener {
             val intent = Intent(this,TestPresentActivity::class.java)
             startActivity(intent)
+        }
+        if ( viewModel.isFirstime == false) {
+            viewModel.isFirstime = true
+            disableClickButtons(view)
+            this.viewPresentBlack.visibility = View.VISIBLE
         }
     }
 
@@ -32,6 +39,7 @@ class PresentActivity : AppCompatActivity() {
         this.txt_1.visibility = View.GONE
         this.txt_2.visibility = View.GONE
         this.linearLayout6.visibility = View.GONE
+        this.viewPresentBlack.visibility = View.GONE
         clickButtons(view)
     }
     fun disableClickButtons(view: View){
@@ -64,18 +72,25 @@ class PresentActivity : AppCompatActivity() {
     }
 
     fun pronounFirst(view: View){
-        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
-
-//            if (this.btn_first.setOnTouchListener(true))
-            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtFirstComplete.text = toBe[0]
-            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtSecondComplete.text = toBe[1]
-            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
-            this.txtThirdComplete.text = toBe[2]
-        },{error ->
-//            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
-        })
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Ellos)
+        this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
+        this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtSecondComplete.text = toBe[1].variant.toUpperCase()
+        this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+        this.txtThirdComplete.text = toBe[2].variant.toUpperCase()
+//        this.viewModel.retriveToBe().subscribe({toBe:List<String> ->
+//
+////            if (this.btn_first.setOnTouchListener(true))
+//            this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+//            this.txtFirstComplete.text = toBe[0]
+//            this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+//            this.txtSecondComplete.text = toBe[1]
+//            this.txtThirdComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
+//            this.txtThirdComplete.text = toBe[2]
+//        },{error ->
+////            Toast.makeText(this,error.message, Toast.LENGTH_LONG).show()
+//        })
     }
     fun pronounSecond(view: View){
         this.viewModel.retriveToBe().subscribe({toBe:List<String> ->

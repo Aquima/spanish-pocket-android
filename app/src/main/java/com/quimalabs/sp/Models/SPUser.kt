@@ -1,6 +1,6 @@
 package com.quimalabs.sp.Models
 
-class WongUser {
+class SPUser {
     constructor(email:String,isVerified:Boolean){
         this.isVerified = isVerified
         this.email = email

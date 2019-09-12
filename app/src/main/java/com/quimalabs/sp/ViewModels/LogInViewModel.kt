@@ -6,7 +6,7 @@ import android.content.Intent
 import androidx.lifecycle.ViewModel
 import com.quimalabs.sp.Models.ApiClient
 import com.quimalabs.sp.Models.LogInModel
-import com.quimalabs.sp.Models.WongUser
+import com.quimalabs.sp.Models.SPUser
 import com.quimalabs.sp.Views.LogInActivity
 import com.quimalabs.sp.Views.ScoreActivity
 import io.reactivex.Observable
@@ -14,7 +14,7 @@ import io.reactivex.Observable
 class LogInViewModel:ViewModel() {
     lateinit var apiClient:ApiClient
     var logInModel = LogInModel()
-    fun signIn(email:String,password:String,activity:Activity):Observable<WongUser>{
+    fun signIn(email:String,password:String,activity:Activity):Observable<SPUser>{
         this.apiClient = ApiClient(activity)
         return apiClient.signIn(email,password)
     }
