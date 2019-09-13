@@ -22,6 +22,7 @@ class ImpPastActivity : AppCompatActivity() {
         setContentView(R.layout.activity_imp_past)
         disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(ImpPastViewModel::class.java)
+        setComponentBaseImpPast(viewImpPast)
         if (viewModel.isFirstime==false){
             viewModel.isFirstime=true
             toolsTipsVisibility(viewImpPast)
@@ -67,12 +68,15 @@ class ImpPastActivity : AppCompatActivity() {
     fun backScores(view: View) {
         this.onBackPressed()
     }
-
-    fun pronounFirstImpPast(view: View){
+    fun setComponentBaseImpPast(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.Yo)
         this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
         this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
         this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+    }
+
+    fun pronounFirstImpPast(view: View){
+        var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.Yo)
         this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -82,9 +86,6 @@ class ImpPastActivity : AppCompatActivity() {
     }
     fun pronounSecondImpPast(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.Tu)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -94,9 +95,6 @@ class ImpPastActivity : AppCompatActivity() {
     }
     fun pronounThirdImpPast(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.El)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -106,9 +104,6 @@ class ImpPastActivity : AppCompatActivity() {
     }
     fun pronounQuarterImpPast(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.Nosotros)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -118,9 +113,6 @@ class ImpPastActivity : AppCompatActivity() {
     }
     fun pronounFifthImpPast(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForImpPast(EnumPronouns.Ellos)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdImpPast.setTextColor(getResources().getColorStateList(R.color.colorGreen))

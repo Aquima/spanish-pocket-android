@@ -22,6 +22,7 @@ class SimplePastActivity : AppCompatActivity() {
         setContentView(R.layout.activity_simple_past)
         disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(SimplePastViewModel::class.java)
+        setComponentBaseSimplePast(viewSimplePast)
         this.btn_go_test_simple_past.setOnClickListener {
             val intent = Intent(this, TestSimplePastActivity::class.java)
             this.startActivity(intent)
@@ -71,6 +72,12 @@ class SimplePastActivity : AppCompatActivity() {
     fun backStores(view: View) {
         this.onBackPressed()
     }
+    fun setComponentBaseSimplePast(view: View){
+        var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Yo)
+        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
+        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
+        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+    }
     fun onStarAnimationTestSimplePast(view: View){
         val valueAnimatorSimplePast: ValueAnimator =ValueAnimator.ofFloat(0f,360f)
         valueAnimatorSimplePast.addUpdateListener {
@@ -85,9 +92,6 @@ class SimplePastActivity : AppCompatActivity() {
     }
     fun pronounFirstPastSimple(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Yo)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
         this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
         this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
@@ -97,9 +101,6 @@ class SimplePastActivity : AppCompatActivity() {
     }
     fun pronounSecondPastSimple(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Tu)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
         this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
         this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
@@ -109,9 +110,6 @@ class SimplePastActivity : AppCompatActivity() {
     }
     fun pronounThirdPastSimple(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.El)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
         this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
         this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
@@ -121,9 +119,6 @@ class SimplePastActivity : AppCompatActivity() {
     }
     fun pronounQuarterPastSimple(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Nosotros)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
         this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
         this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()
@@ -133,9 +128,6 @@ class SimplePastActivity : AppCompatActivity() {
     }
     fun pronounFifthPastSimple(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForSimplePast(EnumPronouns.Ellos)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstPastSimple.text = toBe[0].variant.toUpperCase()
         this.txtSecondPastSimple.text = toBe[1].variant.toUpperCase()
         this.txtThirdPastSimple.text = toBe[2].variant.toUpperCase()

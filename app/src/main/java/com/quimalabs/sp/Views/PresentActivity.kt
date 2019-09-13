@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.LinearInterpolator
+import android.widget.Button
 import androidx.lifecycle.ViewModelProviders
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.DrawWord
@@ -20,7 +21,7 @@ class PresentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_present)
         viewModel = ViewModelProviders.of(this).get(PresentViewModel::class.java)
-
+        setComponentBasePresent(viewPresent)
         this.btn_go_test_present.setOnClickListener {
             val intent = Intent(this,TestPresentActivity::class.java)
             startActivity(intent)
@@ -70,19 +71,25 @@ class PresentActivity : AppCompatActivity() {
     fun backScores(view : View){
         this.onBackPressed()
     }
-    fun setupPronouns(){
-//        this.btn_first.tag = Pronouns.Yo
-//        this.btn_second.tag = Pronouns.Tu
-//        this.btn_third.tag = Pronouns.El
-//        this.btn_quarter.tag = Pronouns.Nosotros
-//        this.btn_fifth.tag = Pronouns.Ellos
-    }
-
-    fun pronounFirst(view: View){
+    fun setComponentBasePresent(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Yo)
         this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
         this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
         this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
+    }
+    fun selectPronouns(){
+        var buttons = ArrayList<Button>()
+//        private fun loopThrough(parent: ViewGroup) {
+//            for (i in 0 until parent.childCount) {
+//                val child = parent.getChildAt(i)
+//                if (child is Button) buttons.add(child)
+//                else if (child is ViewGroup) loopThrough(child)
+//            }
+//        }
+    }
+
+    fun pronounFirst(view: View){
+        var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Yo)
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -92,9 +99,6 @@ class PresentActivity : AppCompatActivity() {
     }
     fun pronounSecond(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Tu)
-        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -104,9 +108,6 @@ class PresentActivity : AppCompatActivity() {
     }
     fun pronounThird(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.El)
-        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -116,9 +117,6 @@ class PresentActivity : AppCompatActivity() {
     }
     fun pronounQuarter(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Nosotros)
-        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -128,9 +126,6 @@ class PresentActivity : AppCompatActivity() {
     }
     fun pronounFifth(view: View){
         var toBe: List<DrawWord> = viewModel.getPronounsForPresent(EnumPronouns.Ellos)
-        this.txtFirstPronouns.text=toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text=toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text=toBe[2].base.toUpperCase()
         this.txtFirstComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtFirstComplete.text = toBe[0].variant.toUpperCase()
         this.txtSecondComplete.setTextColor(getResources().getColorStateList(R.color.colorGreen))

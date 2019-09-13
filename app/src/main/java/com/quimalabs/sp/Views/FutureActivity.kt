@@ -22,6 +22,7 @@ class FutureActivity : AppCompatActivity() {
         setContentView(R.layout.activity_future)
         disableClickButtons(view)
         viewModel = ViewModelProviders.of(this).get(FutureViewModel::class.java)
+        setComponentBaseFuture(viewFuture)
         if (viewModel.isFirstime==false){
             viewModel.isFirstime=true
             toolsTipsVisibility(viewFuture)
@@ -66,12 +67,21 @@ class FutureActivity : AppCompatActivity() {
     fun backStores(view: View) {
         this.onBackPressed()
     }
-
-    fun pronounFirstFuture(view: View){
+    fun setComponentBaseFuture(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Yo)
         this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
         this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
         this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
+        this.txtFirstFuture.text = toBe[0].variant.toUpperCase()
+        this.txtSecondFuture.text = toBe[1].variant.toUpperCase()
+        this.txtThirdFuture.text = toBe[2].variant.toUpperCase()
+        this.txtFirstFuture.visibility = View.VISIBLE
+        this.txtSecondFuture.visibility = View.VISIBLE
+        this.txtThirdFuture.visibility = View.VISIBLE
+    }
+
+    fun pronounFirstFuture(view: View){
+        var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Yo)
         this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -85,9 +95,6 @@ class FutureActivity : AppCompatActivity() {
     }
     fun pronounSecondFuture(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Tu)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -97,9 +104,6 @@ class FutureActivity : AppCompatActivity() {
     }
     fun pronounThirdFuture(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.El)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -109,9 +113,6 @@ class FutureActivity : AppCompatActivity() {
     }
     fun pronounQuarterFuture(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Nosotros)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
@@ -121,9 +122,6 @@ class FutureActivity : AppCompatActivity() {
     }
     fun pronounFifthFuture(view: View){
         var toBe:List<DrawWord> = viewModel.getPronounsForFuture(EnumPronouns.Ellos)
-        this.txtFirstPronouns.text = toBe[0].base.toUpperCase()
-        this.txtSecondPronouns.text = toBe[1].base.toUpperCase()
-        this.txtThirdPronouns.text = toBe[2].base.toUpperCase()
         this.txtFirstFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtSecondFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
         this.txtThirdFuture.setTextColor(getResources().getColorStateList(R.color.colorGreen))
