@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
-                android:background="@drawable/btn_corner_green_ligth"
+                android:background="@drawable/btn_corner_white"
                 android:onClick="infoScores"
                 android:text="@string/title_score"
                 android:textColor="@color/primaryWhiteColor"
@@ -46,6 +46,7 @@
     </LinearLayout>
 
     <LinearLayout
+            android:id="@+id/linearLayout12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -177,5 +178,31 @@
                     app:fontFamily="@font/pavanam" />
         </LinearLayout>
     </LinearLayout>
+    <View
+            android:id="@+id/viewProgressScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/primaryWhiteColor"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/progressBar"
+            android:indeterminateOnly="true"
+            android:keepScreenOn="true"
+            android:layout_marginTop="0dp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/colorGreen"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

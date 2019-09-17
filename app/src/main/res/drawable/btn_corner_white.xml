@@ -4,7 +4,7 @@
             android:radius="@dimen/corner_value"
     />
     <solid
-            android:color= "@color/primaryWhiteColor"
+            android:color= "@color/colorGreen"
     />
     <padding
             android:left="0dp"
@@ -18,6 +18,6 @@
     />
     <stroke
             android:width="1dp"
-            android:color="@color/colorGreen"
+            android:color="@color/primaryWhiteColor"
     />
 </shape>

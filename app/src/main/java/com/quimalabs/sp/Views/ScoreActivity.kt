@@ -12,6 +12,7 @@ import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.ScoreViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_future.*
 import kotlinx.android.synthetic.main.activity_score.*
 
 class ScoreActivity : AppCompatActivity() {
@@ -53,6 +54,8 @@ class ScoreActivity : AppCompatActivity() {
                 {
                     //onComplete ya termino de traerme toda la data
                    // Log.d("spocket", listWords.size.toString())
+                    progressBar.visibility = View.GONE
+                    viewProgressScreen.visibility = View.GONE
                 }
         )
         observableWord
