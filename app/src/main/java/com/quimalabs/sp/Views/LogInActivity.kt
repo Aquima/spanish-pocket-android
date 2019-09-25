@@ -1,6 +1,5 @@
 package com.quimalabs.sp.Views
 
-import androidx.lifecycle.ViewModelProvider
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import com.jakewharton.rxbinding3.view.clicks
 import com.jakewharton.rxbinding3.widget.textChanges
 import com.quimalabs.sp.Models.SPUser
@@ -16,8 +16,6 @@ import com.quimalabs.sp.ViewModels.LogInViewModel
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import kotlinx.android.synthetic.main.activity_log_in.*
-
-
 
 class LogInActivity : AppCompatActivity() {
     lateinit var viewModel:LogInViewModel
@@ -28,9 +26,14 @@ class LogInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_log_in)
         supportActionBar?.hide()
 
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(LogInViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(LogInViewModel::class.java)
+
         this.btn_newaccount.setOnClickListener {
             val intent = Intent(this,RegisterActivity::class.java)
+            startActivity(intent)
+        }
+        this.btn_recoverypass.setOnClickListener {
+            val intent = Intent(this,RecoverPasswordActivity::class.java)
             startActivity(intent)
         }
         var validateEmail:Observable<Boolean> = this.txt_email
@@ -48,7 +51,6 @@ class LogInActivity : AppCompatActivity() {
 
         var isSignInEnabled: Observable<Boolean> = Observable.combineLatest(validateEmail,
             validatePassword,BiFunction() { u:Boolean, p:Boolean -> u && p})
-
 
         val observer = isSignInEnabled.subscribe {
             if (it == true) {
@@ -89,8 +91,6 @@ class LogInActivity : AppCompatActivity() {
         })
     }
     fun goToHome(){
-
-            viewModel.goToHome(this,this)
-
+        viewModel.goToHome(this,this)
     }
 }

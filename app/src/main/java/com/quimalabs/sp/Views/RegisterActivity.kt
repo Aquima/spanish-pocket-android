@@ -1,10 +1,10 @@
 package com.quimalabs.sp.Views
 
-import androidx.lifecycle.ViewModelProvider
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProviders
 import com.quimalabs.sp.Models.SPUser
 import com.quimalabs.sp.R
 import com.quimalabs.sp.ViewModels.RegisterViewModel
@@ -16,7 +16,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
         supportActionBar?.hide()
-        viewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(application).create(RegisterViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(RegisterViewModel::class.java)
     }
 
     fun tapToCreateAccount(view: View){

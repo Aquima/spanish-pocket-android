@@ -19,71 +19,70 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="VectorDrawableCompat" />
 
-
+<!--insert Email and Password-->
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:id="@+id/linearLayoutB"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/img_logo"
+            app:layout_constraintTop_toBottomOf="@+id/img_logo">
 
-            android:id="@+id/linearLayoutB">
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/TextLabel">
 
             <EditText
-                    android:windowSoftInputMode="adjustResize"
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:inputType="textEmailAddress"
                     android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:fontFamily="@font/old_standard_tt"
                     android:hint="@string/ph_txt_email"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/primaryWhiteColor"
                     android:textColorHint="@color/hintTextColor"
                     android:textCursorDrawable="@drawable/color_cursor_drawable"
-                    android:background="@null"
-                    android:fontFamily="@font/helvetica"
                     android:textSize="14sp"
-                    android:layout_marginLeft="20dp"/>
+                    android:windowSoftInputMode="adjustResize" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <View
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/primaryWhiteColor"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
-                android:layout_marginLeft="15dp"/>
+                android:background="@color/primaryWhiteColor" />
+
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputLayout2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:theme="@style/TextLabel"
                 app:passwordToggleEnabled="true"
-                android:theme="@style/TextLabel">
-
-
+                app:passwordToggleTint="#FFF">
 
             <EditText
-                    android:layout_width="300dp"
-                    android:layout_height="40dp"
-                    android:inputType="textPassword"
                     android:id="@+id/txt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:fontFamily="@font/old_standard_tt"
                     android:hint="@string/ph_txt_password"
+                    android:inputType="textPassword"
                     android:textColor="@color/primaryWhiteColor"
                     android:textColorHint="@color/hintTextColor"
                     android:textCursorDrawable="@drawable/color_cursor_drawable"
-                    android:background="@null"
-                    android:fontFamily="@font/helvetica"
-                    android:textSize="14sp"
-                    android:layout_marginLeft="20dp"/>
+                    android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
+        <!--Buttons: login, recovery and register-->
     </LinearLayout>
     <LinearLayout
             android:orientation="vertical"
@@ -91,8 +90,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutB"
-    >
+            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutB">
         <Button
                 android:text="@string/btn_login"
                 android:layout_width="280dp"
@@ -102,9 +100,10 @@
                 android:background="@drawable/btn_corner_green_ligth"
                 android:textColor="@color/colorGreen"
                 android:textAllCaps="false"
-                android:fontFamily="@font/helvetica"
                 android:layout_marginBottom="10dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:fontFamily="@font/old_standard_tt" />
         <Button
                 android:text="@string/btn_newaccount"
                 android:layout_width="280dp"
@@ -113,8 +112,10 @@
                 android:background="@drawable/btn_corner_white"
                 android:textColor="@color/primaryWhiteColor"
                 android:textAllCaps="false"
-                android:fontFamily="@font/helvetica"
-                android:layout_marginBottom="10dp" android:textStyle="bold"/>
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:fontFamily="@font/old_standard_tt" />
         <Button
                 android:text="@string/btn_recoverypass"
                 android:layout_width="280dp"
@@ -123,7 +124,9 @@
                 android:background="@drawable/btn_corner_white"
                 android:textColor="@color/primaryWhiteColor"
                 android:textAllCaps="false"
-                android:fontFamily="@font/helvetica"
-                android:layout_marginBottom="10dp" android:textStyle="bold"/>
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:fontFamily="@font/old_standard_tt" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

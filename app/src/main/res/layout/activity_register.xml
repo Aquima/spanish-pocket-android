@@ -7,20 +7,22 @@
         android:layout_height="match_parent"
         android:background="@color/primaryWhiteColor"
         tools:context=".Views.RegisterActivity">
+<!--Button close register-->
     <ImageButton
+            android:id="@+id/btn_close"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            app:srcCompat="@drawable/img_close"
-            android:id="@+id/btn_close"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:background="@null"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="330dp"
-            android:layout_marginStart="330dp"
-            android:onClick="backLogin" tools:ignore="VectorDrawableCompat" android:scaleType="fitCenter"
-            android:layout_marginRight="10dp" android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:onClick="backLogin"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_close"
+            tools:ignore="VectorDrawableCompat" />
+
+<!-- Title Create Account -->
     <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content"
@@ -46,89 +48,126 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:textColor="@color/colorGreen"
                 android:textSize="50dp"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                app:fontFamily="@font/old_standard_tt" />
     </LinearLayout>
+
+<!-- EditText: Email and Password-->
     <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+            android:id="@+id/linearLayoutB"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutA"
-            android:id="@+id/linearLayoutB">
-        <EditText
-                android:layout_width="350dp"
-                android:layout_height="35dp"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/txt_email"
-                android:hint="@string/ph_txt_email"
-                android:textColor="@color/colorGreen"
-                android:textColorHint="@color/hintTextColor"
-                android:textCursorDrawable="@color/colorGreen"
-                android:background="@null"
-                android:layout_marginLeft="20dp"/>
-        <View
-                android:layout_width="330dp"
-                android:layout_height="1dp"
-                android:background="@color/colorGreen"
-                android:layout_marginLeft="15dp"/>
-
-        <EditText
-                android:layout_width="350dp"
-                android:layout_height="35dp"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/txt_password"
-                android:hint="@string/ph_txt_password"
-                android:textColor="@color/colorGreen"
-                android:textColorHint="@color/hintTextColor"
-                android:textCursorDrawable="@color/colorGreen"
-                android:background="@null"
-                android:layout_marginLeft="20dp"/>
-        <View
-                android:layout_width="330dp"
-                android:layout_height="1dp"
-                android:background="@color/colorGreen"
-                android:layout_marginLeft="15dp"/>
-
-        <EditText
-                android:layout_width="350dp"
-                android:layout_height="35dp"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/txt_retype_password"
-                android:hint="@string/retype_password"
-                android:textColor="@color/colorGreen"
-                android:textColorHint="@color/hintTextColor"
-                android:textCursorDrawable="@color/colorGreen"
-                android:background="@null"
-                android:layout_marginLeft="20dp"/>
-        <View
-                android:layout_width="330dp"
-                android:layout_height="1dp"
-                android:background="@color/colorGreen"
-                android:layout_marginLeft="15dp"/>
-    </LinearLayout>
-    <LinearLayout
+            android:layout_marginEnd="40dp"
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/linearLayoutB"
-            android:id="@+id/linearLayoutC">
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutA">
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextRegister">
+
+            <EditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/old_standard_tt"
+                    android:hint="@string/ph_txt_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="15sp"
+                    android:textColorHint="@color/hintEditTextColor"
+                    android:textCursorDrawable="@color/colorGreen" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGreen" />
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextRegister"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorGreen">
+
+            <EditText
+                    android:id="@+id/txt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/old_standard_tt"
+                    android:hint="@string/ph_txt_password"
+                    android:inputType="textPassword"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorGreen"
+                    android:textColorHint="@color/hintEditTextColor"
+                    android:textCursorDrawable="@color/colorGreen" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGreen" />
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextRegister"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorGreen">
+            <EditText
+                    android:id="@+id/txt_retype_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/retype_password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorGreen"
+                    android:textColorHint="@color/hintEditTextColor"
+                    android:textCursorDrawable="@color/colorGreen"
+                    android:fontFamily="@font/old_standard_tt" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGreen" />
+    </LinearLayout>
+
+<!--Button create account-->
+    <LinearLayout
+            android:id="@+id/linearLayoutC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
         <Button
-                android:text="@string/btn_createaccount"
+                android:id="@+id/btn_createaccount"
                 android:layout_width="280dp"
                 android:layout_height="45dp"
-                android:id="@+id/btn_createaccount"
-                android:background="@drawable/btn_corner_green_ligth"
-                android:textColor="@color/primaryWhiteColor"
-                android:textAllCaps="false"
                 android:layout_marginBottom="10dp"
-                android:fontFamily="@font/helvetica"
-                android:onClick="tapToCreateAccount" android:textStyle="bold"/>
+                android:background="@drawable/btn_green_ligth"
+                android:onClick="tapToCreateAccount"
+                android:text="@string/btn_create_account"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBackground"
+                android:textStyle="bold"
+                android:fontFamily="@font/old_standard_tt"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
