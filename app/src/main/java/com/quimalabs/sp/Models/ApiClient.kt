@@ -64,6 +64,7 @@ class ApiClient {
         val TAG = "spocket"
         val observable:Observable<Word> = Observable.create { observer ->
             db.collection("words")
+                .whereEqualTo("isIntro", true)
                 .get()
                 .addOnSuccessListener { result ->
                     for (document in result) {
